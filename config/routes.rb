@@ -3,7 +3,7 @@ Rails.application.routes.draw do
  
   resources :cmsedit
   match 'elfinder' => 'dc_elfinder#connector', via: [:get, :post]
-  match 'poll' => 'dc_main#page', via: [:get, :post]
+#  match 'poll' => 'dc_main#page', via: [:get, :post]
   match '/dc_common/:action' => 'dc_common#:action', via: [:get, :put, :post]
 
   get '*path' => 'dc_main#page' 
