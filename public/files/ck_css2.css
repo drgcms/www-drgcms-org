@@ -1,0 +1,26 @@
+body {
+  font-family: Noto Sans, Helvetica;
+  letter-spacing: 0px;
+  margin: 5px;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+a:link, a:active, a:visited { color: #db363a; text-decoration: none; background: transparent;}
+a:hover { text-decoration: none; color: #445;}
+
+p, h1, h2, h3, h4, h5, h6 { 
+  margin-top: 0em; 
+  margin-bottom: 0em;
+} 
+
+input, textarea {
+  font-size: 1em;
+}
+
+.program-code {
+font-family: monospace;
+background: #eee;
+border: 1px solid #ccc;
+padding: 4px;
+}

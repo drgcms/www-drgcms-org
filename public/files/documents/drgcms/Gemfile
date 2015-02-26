@@ -1,0 +1,23 @@
+source 'https://rubygems.org'
+
+gem 'rails' 
+gem 'activeresource'
+
+gem 'sass-rails'
+#gem 'coffee-rails'  #, '~> 3.2.1'
+gem 'uglifier'
+
+gem "non-stupid-digest-assets"
+gem 'bcrypt' # , '~> 3.0.0'
+
+gem 'mongoid', '4.0.0.beta1'
+gem 'bson_ext'
+gem 'mongo_session_store-rails3', github: 'maisaengineering/mongoid4-session-store'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'kaminari'                 
+gem 'therubyracer'
+
+gem 'drg_cms'
+gem 'drg_default_html_editor'
