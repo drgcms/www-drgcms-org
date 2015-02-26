@@ -1,5 +1,6 @@
 ENV["RAILS_ENV"] ||= "development"
 
+source 'https://rubygems.org'
 source 'http://gems.ozs.si' if ENV["RAILS_ENV"] == "development"
 
 #ENV["RAILS_ENV"] = "production" if ENV["OPENSHIFT_RUBY_VERSION"]
