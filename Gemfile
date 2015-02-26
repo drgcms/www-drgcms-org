@@ -31,6 +31,7 @@ if ENV["RAILS_ENV"] == "development"
   gem 'drg_books', :path => '../drg_books'
   gem 'drg_blog_news_forum', :path => '../drg_blog_news_forum'
 else
+  gem 'puma'
   gem 'drg_cms'
   gem 'drg_default_html_editor'
   gem 'drg_books'

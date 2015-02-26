@@ -17,17 +17,10 @@ test:
       options:
   options:
     raise_not_found_error: false # by rems
-    
 
-<% if ENV['OPENSHIFT_MONGODB_DB_HOST'] %>
 production:
   sessions:
     default:
-      database: <%= ENV['OPENSHIFT_APP_NAME'] %>
-      hosts:
-        - <%="#{ENV['OPENSHIFT_MONGODB_DB_HOST']}:#{ENV['OPENSHIFT_MONGODB_DB_PORT']}" %>
-      username: <%= ENV['OPENSHIFT_MONGODB_DB_USERNAME'] %>
-      password: <%= ENV['OPENSHIFT_MONGODB_DB_PASSWORD'] %>
+      uri: <%= ENV['MONGOHQ_URL'] %>
   options:
-      raise_not_found_error: false # by rems
-<% end %>
+    raise_not_found_error: false
