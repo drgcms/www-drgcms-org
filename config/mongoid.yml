@@ -1,8 +1,33 @@
+development:
+  sessions:
+    default:
+      database: rails_project_development
+      hosts:
+        - localhost:27017
+      options:
+  options:
+    raise_not_found_error: false # by rems
+
+test:
+  sessions:
+    default:
+      database: rails_project_test
+      hosts:
+        - localhost:27017
+      options:
+  options:
+    raise_not_found_error: false # by rems
+    
+
+<% if ENV['OPENSHIFT_MONGODB_DB_HOST'] %>
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      database: <%= ENV['OPENSHIFT_APP_NAME'] %>
+      hosts:
+        - <%="#{ENV['OPENSHIFT_MONGODB_DB_HOST']}:#{ENV['OPENSHIFT_MONGODB_DB_PORT']}" %>
+      username: <%= ENV['OPENSHIFT_MONGODB_DB_USERNAME'] %>
+      password: <%= ENV['OPENSHIFT_MONGODB_DB_PASSWORD'] %>
   options:
-    raise_not_found_error: false
-    
-# heroku addons:add mongohq
+      raise_not_found_error: false # by rems
+<% end %>

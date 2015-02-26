@@ -1,0 +1,71 @@
+## YAML Template for page
+---
+table: dc_plugin
+
+index:
+  actions: standard
+
+result_set:
+  actions: standard
+
+  columns:
+    1:  
+      name: name
+      style: "text-align: left;"
+    2: 
+      name: authors
+      style: "text-align: left;"
+
+edit_title: name
+
+form:
+  actions: standard
+
+  fields:
+    10:
+      name: name
+      type: text_field
+      html:
+        size: 50
+    20:
+      name: description
+      type: text_area
+      html:
+        size: 80x6
+    30:
+      name: last_ver
+      type: text_field
+      html:
+        size: 10
+    40:
+      name: type
+      type: select
+      choices: Editor extension:1,Application plugin:2
+    50:
+      name: authors
+      type: text_field
+      html:
+        size: 50
+    60:
+      name: home_url
+      type: text_field
+      html:
+        size: 50
+    70:
+      name: src_url
+      type: text_field
+      html:
+        size: 50
+    80:
+      name: doc_url
+      type: text_field
+      html:
+        size: 50
+    90:
+      name: install
+      type: text_area
+      html:
+        size: 80x6
+    100:
+      name: active
+      type: check_box

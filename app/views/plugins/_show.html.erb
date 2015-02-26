@@ -1,0 +1,17 @@
+<div id="plugin">
+  <%= session[:user_id] == plugin.created_by ? dc_link_for_edit({ 
+      controller: :cmsedit, id: plugin, table: 'dc_plugin', formname: 'dc_plugin_edit',
+      title: t('dc_plugin.edit_plugin', 'Edit plugin!'), target: 'iframe_edit' })+'<br/>'.html_safe : '' %>
+  <span id="plugin-name"><%= plugin.name %></span>&nbsp;&nbsp;
+  <span id="plugin-ver">version: <%= plugin.last_ver %></span><br>
+
+  <span id="plugin-owner"><b>Owner:</b> <%= DcUser.find(plugin.created_by).name %></span>&nbsp;&nbsp;
+  <span id="plugin-authors"><b>Authors:</b> <%= plugin.authors %></span><br><br>
+  <span id="plugin-desc"><%= plugin.description %></span><br><br>
+  
+  <span id="plugin-links"><b>Links:</b>
+    <%= link_to('Home',plugin.home_url) %>&nbsp;
+    <%= link_to('Source',plugin.src_url) %>&nbsp;
+    <%= link_to('Documentation',plugin.doc_url) %>
+  </span>
+</div>

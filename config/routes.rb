@@ -1,12 +1,31 @@
-Rails.application.routes.draw do
-  root :to => 'dc_main#page'
- 
+WwwDrgcms::Application.routes.draw do
+  root :to => "dc_main#page"
+
+  match '/dc_common/:action' => 'dc_common#:action', via: [:get, :put, :post]
+#  match 'elfinder' => 'home#elfinder', via: [:get, :post]
+  get 'home' => 'dc_main#page'
+  #match '/book/:id' => 'main#page:id'
+  #get '/book/*path/:id', to: 'main#page'
+  
+  get '/blog/:name/:link' => 'dc_main#page', :defaults => { path: 'blog' }
+  get '/blog/:name' => 'dc_main#page', :defaults => { path: 'blog', link: 'all' }
+  #get '/blog' => 'dc_main#page', :defaults => { path: 'blog', link: 'all' }
+  
+  get '/books/:method/:book_id/', to: 'dc_main#page', :defaults => { path: 'books' }
+  get '/books/:method/:book_id/:chapter_id', to: 'dc_main#page', :defaults => { path: 'books' }
+  get '/books/:method/:book_id/:chapter_id/:version', to: 'dc_main#page', :defaults => { path: 'books' }
+  
+#  match '/at_the_beginning/:action'   => 'dc_at_the_beginning#:action'
+  get '/page/:id' => 'books#page#:id'
+
+  get '/plugins' => 'dc_main#page', :defaults => { path: 'plugins' }
+
+#  match 'cmsedit/login' => 'cmsedit#login', via: [:get]  
   resources :cmsedit
   match 'elfinder' => 'dc_elfinder#connector', via: [:get, :post]
-#  match 'poll' => 'dc_main#page', via: [:get, :post]
-  match '/dc_common/:action' => 'dc_common#:action', via: [:get, :put, :post]
-
-  get '*path' => 'dc_main#page' 
+  #match 'poll' => 'dc_main#page', via: [:get, :post]
+  
+  get '*path' => 'dc_main#page'  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

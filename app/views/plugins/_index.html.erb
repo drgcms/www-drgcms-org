@@ -1,0 +1,32 @@
+ 
+<div id="katalog-okvir">
+  <div style="float:left;"><h1>Available plugins</h1></div><br>
+   <div style="float:right;">
+     <%= text_field_tag('plugins-search', params[:search], placeholder: "search plugins", autofocus: true, size: 15) %>
+   </div><div class="clear-both"></div>
+  <div id="plugins-result">
+    <%= render( partial: 'plugins/list', locals: { plugins: plugins } ) %>
+  </div>
+</div>
+
+<%= javascript_tag do %>
+do_plugins_search = function() {
+  $.ajax({
+      url:      "plugins",
+      type:     "POST",
+      dataType: "json",
+      data:     { search: $("#plugins-search").val() },
+      success:  function(data) {
+        process_json_result(data);
+      }
+   });  
+}
+
+$(document).ready(function() {
+  $('#plugins-search').on('input', function(e) {
+    if ( $("#plugins-search").val().length > 1) do_plugins_search();
+    if ( $("#plugins-search").val().length == 0) do_plugins_search();
+  });
+});
+<% end %>
+
