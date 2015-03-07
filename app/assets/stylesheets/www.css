@@ -3,7 +3,10 @@ body {
 background-color: #f8f8f8;
 font-family: Noto Sans,Helvetica;
 }
-
+p, h1, h2, h3, h4, h5, h6 { 
+  margin-top: 0em; 
+  margin-bottom: 0em;
+}
 a:link, a:active, a:visited { color: #db363a; text-decoration: none; background: transparent;}
 a:hover { text-decoration: none; color: #445;}
 
@@ -127,22 +130,24 @@ padding-top: 4px;
 .book-contents-level4 { padding-left: 24px;}
 
 /* plugins */
-#plugin {
-    
+.plugin {
+margin-top: 20px; 
 }
-#plugin-name {
-font-size: 24px;
+.plugin-info {
+font-size: 1.2em;
+}
+
+#plugin{
+font-size: 1.2em;
 }
 #plugin-ver {
-font-size: 16px;
-color: #888;
+color: #db363a;
+font-size: 0.8em;
 }
-#plugin-desc {
+#plugin-info {
 color:#222;
 }
 #plugin-authors {
-}
-#plugin-owner {
 }
 
 /* login */
@@ -203,4 +208,10 @@ font-family: monospace;
 background: #eee;
 border: 1px solid #ccc;
 padding: 4px;
+}
+
+
+.blog-entry a {
+font-size: 1.4em;
+padding-bottom: 10px;
 }

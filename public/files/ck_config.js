@@ -43,7 +43,7 @@ CKEDITOR.stylesSet.add( 'default', [
 		attributes: { 'class': 'program-code' }
         },
 	{
-		name: 'Rumeno Dvignjeno ozadje',
+		name: 'Yellow rised background',
 		element: 'div',
 		styles: {
 			padding: '10px',
@@ -53,13 +53,24 @@ CKEDITOR.stylesSet.add( 'default', [
 		}
   },
 	{
-		name: 'Podčrtano s pikicami',
+		name: 'Underlined with dots',
 		element: 'div',
 		styles: {
 			padding: '2px',
       'border-bottom': '2px dotted #ccc',
       'margin-top': '10px',
       'padding-bottom': '30px'
+		}
+	},
+	{ name: 'Italic Title',		element: 'h2', styles: { 'font-style': 'italic' } },
+	{ name: 'Subtitle',			element: 'h3', styles: { 'color': '#aaa', 'font-style': 'italic' } },
+	{
+		name: 'Special Container',
+		element: 'div',
+		styles: {
+			padding: '5px 10px',
+			background: '#eee',
+			border: '1px solid #ccc'
 		}
 	},
 
@@ -77,23 +88,25 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Superscript',		element: 'sup' },
 	*/
 
-	{ name: 'Marker: Rumen',	element: 'span', styles: { 'background-color': 'Yellow' } },
-	{ name: 'Marker: Zelen',	element: 'span', styles: { 'background-color': 'Lime' } },
+	{ name: 'Marker',			element: 'span', attributes: { 'class': 'marker' } },
 
-	{ name: 'Večje',			element: 'big' },
-	{ name: 'Manjše',			element: 'small' },
-	{ name: 'Pisalni stroj',		element: 'tt' },
+	{ name: 'Big',				element: 'big' },
+	{ name: 'Small',			element: 'small' },
+	{ name: 'Typewriter',		element: 'tt' },
 
-	{ name: 'Računalniško',	element: 'code' },
-	{ name: 'Tipkovnica',   element: 'kbd' },
-	{ name: 'Tekst primer',  element: 'samp' },
-	{ name: 'Spremenljivka',     element: 'var' },
+	{ name: 'Computer Code',	element: 'code' },
+	{ name: 'Keyboard Phrase',	element: 'kbd' },
+	{ name: 'Sample Text',		element: 'samp' },
+	{ name: 'Variable',			element: 'var' },
 
-	{ name: 'Izbrisann tekst',		element: 'del' },
-	{ name: 'Vstavljen tekst',	element: 'ins' },
+	{ name: 'Deleted Text',		element: 'del' },
+	{ name: 'Inserted Text',	element: 'ins' },
 
-	{ name: 'Citat naslov',		element: 'cite' },
-	{ name: 'Citat vpisan',   element: 'q' },
+	{ name: 'Cited Work',		element: 'cite' },
+	{ name: 'Inline Quotation',	element: 'q' },
+
+	{ name: 'Language: RTL',	element: 'span', attributes: { 'dir': 'rtl' } },
+	{ name: 'Language: LTR',	element: 'span', attributes: { 'dir': 'ltr' } },
 
 	/* Object Styles */
 

@@ -1,6 +1,6 @@
  
-<div id="katalog-okvir">
-  <div style="float:left;"><h1>Available plugins</h1></div><br>
+<div id="plugins-div">
+  <div style="float:left;"><h1>DRG CMS plugins</h1></div><br>
    <div style="float:right;">
      <%= text_field_tag('plugins-search', params[:search], placeholder: "search plugins", autofocus: true, size: 15) %>
    </div><div class="clear-both"></div>
@@ -12,8 +12,8 @@
 <%= javascript_tag do %>
 do_plugins_search = function() {
   $.ajax({
-      url:      "plugins",
-      type:     "POST",
+      url:      "plugins/search",
+      type:     "GET",
       dataType: "json",
       data:     { search: $("#plugins-search").val() },
       success:  function(data) {

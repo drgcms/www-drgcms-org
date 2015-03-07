@@ -26,7 +26,7 @@ class DcPlugin
   include Mongoid::Timestamps
   
   field :name,        type: String
-  field :description, type: String
+  field :info,        type: String
   field :last_ver,    type: String
   field :home_url,    type: String
   field :src_url,     type: String
@@ -42,14 +42,24 @@ class DcPlugin
   
   validates :name,        { presence: true, uniqueness: true }
   
-  validates :description, presence: true  
-  validates :last_ver,    presence: true  
-  validates :src_url,     presence: true  
-  validates :home_url,    presence: true  
-  validates :doc_url,     presence: true  
-  validates :authors,     presence: true  
-  validates :install,     presence: true  
+#  validates :info,        presence: true  
+#  validates :last_ver,    presence: true  
+#  validates :src_url,     presence: true  
+#  validates :home_url,    presence: true  
+#  validates :doc_url,     presence: true  
+#  validates :authors,     presence: true  
+#  validates :install,     presence: true  
   
   index( { name: 1 }, { unique: true } )
-  index( { updated_at: -1 } )
+  index( { type: 1 } )
+  
+  before_save :do_before_save
+  
+#############################################################################
+# Fill search field with values of name and info to simplify searching plugins
+#############################################################################
+def do_before_save
+  self.search = UnicodeUtils.downcase("#{self.name} #{self.info}")
+end  
+
 end

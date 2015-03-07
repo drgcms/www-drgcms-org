@@ -51,7 +51,7 @@ end
 #########################################################################
 def list
   html = ''
-  if @parent.session[:user_id]
+  if @parent.session[:edit_mode] > 1 
     html << dc_link_for_create({ controller: 'cmsedit', table: 'dc_plugin', formname: 'dc_plugin_edit',
             title: t('dc_plugin.new_plugin', 'Create new plugin!'), target: 'iframe_edit' }) 
   end

@@ -2,17 +2,10 @@
 <%= paginate plugins %>
 
 <% for plugin in plugins %>
-  <div class="plugins-search">
-    <div class="plugins-name">
-      <%= session[:user_id] == plugin.created_by ? dc_link_for_edit({ 
-          controller: :cmsedit, id: plugin, table: 'dc_plugin', formname: 'dc_plugin_edit',
-          title: t('dc_plugin.edit_plugin', 'Edit plugin!'), target: 'iframe_edit' }) : '' %>
-      <br>
-      <%#= link_to("#{plugin.name} (#{plugin.last_ver})", { controller: :plugins, p_id: plugin._id, method: 'show' }) %>
-      <%= link_to("#{plugin.name} (#{plugin.last_ver})", "/plugins?p_id=#{plugin._id}&method=show") %>
-    </div>
-    <div class="plugins-desc">
-      <%= plugin.description %>
+  <div class="plugin">
+      <h2><%= link_to("#{plugin.name} (#{plugin.last_ver})", "/plugins?p_id=#{plugin._id}&method=show") %></h2>
+    <div class="plugin-info">
+      <%= plugin.info %>
     </div>
   </div>
 <% end %>

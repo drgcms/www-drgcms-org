@@ -12,13 +12,15 @@ result_set:
     1:  
       name: name
       style: "text-align: left;"
-    2: 
+    2:  
+      name: last_ver
+      style: "text-align: left;"
+    3: 
       name: authors
       style: "text-align: left;"
 
-edit_title: name
-
 form:
+  edit_title: name
   actions: standard
 
   fields:
@@ -28,7 +30,7 @@ form:
       html:
         size: 50
     20:
-      name: description
+      name: info
       type: text_area
       html:
         size: 80x6
