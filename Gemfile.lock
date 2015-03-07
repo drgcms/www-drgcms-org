@@ -183,7 +183,6 @@ PLATFORMS
 DEPENDENCIES
   activeresource
   bcrypt
-  bson
   drg_blog_news_forum!
   drg_books!
   drg_cms!

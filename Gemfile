@@ -14,7 +14,6 @@ gem 'uglifier'      #, '>= 1.0.3'
 gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
 
 gem 'mongoid' #, '4.0.0.beta1'# github: 'mongoid/mongoid'
-gem 'bson'
 gem 'mongo_session_store-rails4'#, github: 'maisaengineering/mongoid4-session-store'
 
 gem 'jquery-rails'
