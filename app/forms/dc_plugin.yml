@@ -13,7 +13,7 @@ result_set:
       name: name
       style: "text-align: left;"
     2:  
-      name: last_ver
+      name: version
       style: "text-align: left;"
     3: 
       name: authors
@@ -35,7 +35,7 @@ form:
       html:
         size: 80x6
     30:
-      name: last_ver
+      name: version
       type: text_field
       html:
         size: 10

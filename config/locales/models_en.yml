@@ -33,7 +33,7 @@ en:
 
         name: Name
         info: Plugin info
-        last_ver: Last version
+        version: Last version
         home_url: Homepage URL
         src_url: Source URL
         doc_url: Documentation URL
@@ -46,7 +46,7 @@ en:
       dc_plugin:
         name: Name of plugin
         info: Plugin information
-        last_ver: Version of last gem published on RubyGems
+        version: Version of last gem published on RubyGems
         home_url: Homepage URL
         src_url: Source URL
         doc_url: Documentation URL

@@ -13,12 +13,12 @@ form:
       html:
         size: 50
     20:
-      name: description
+      name: info
       type: text_area
       html:
         size: 80x6
     30:
-      name: last_ver
+      name: version
       type: text_field
       html:
         size: 10

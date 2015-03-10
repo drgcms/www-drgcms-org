@@ -27,7 +27,7 @@ class DcPlugin
   
   field :name,        type: String
   field :info,        type: String
-  field :last_ver,    type: String
+  field :version,     type: String
   field :home_url,    type: String
   field :src_url,     type: String
   field :doc_url,     type: String

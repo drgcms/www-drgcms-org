@@ -3,14 +3,14 @@
       controller: :cmsedit, id: plugin, table: 'dc_plugin', formname: 'dc_plugin_edit',
       title: t('dc_plugin.edit_plugin', 'Edit plugin!'), target: 'iframe_edit' })+'<br/>'.html_safe : '' %>
   <h1><%= plugin.name %>&nbsp;&nbsp;
-    <span id="plugin-ver">version: <%= plugin.last_ver %></span></h1>
+    <span id="plugin-ver">version: <%= plugin.version %></span></h1>
 
   <span id="plugin-authors"><b>Authors:</b> <%= plugin.authors %></span><br><br>
   <span id="plugin-info"><%= plugin.info %></span><br><br>
   
   <span id="plugin-links"><b>Links:</b>
-    <%= link_to('Home',plugin.home_url) %>&nbsp;
-    <%= link_to('Source',plugin.src_url) %>&nbsp;
-    <%= link_to('Documentation',plugin.doc_url) %>
+    <%= link_to('Home', (plugin.home_url.to_s.size > 5 ? plugin.home_url : '') ) %>
+    <%= link_to('Source', (plugin.src_url.to_s.size > 5 ? plugin.src_url : '') ) %>&nbsp;
+    <%= link_to('Documentation', (plugin.doc_url.to_s.size > 5 ? plugin.doc_url : '') ) %>
   </span>
 </div>
