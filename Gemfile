@@ -22,6 +22,7 @@ gem 'jquery-ui-rails'
 gem 'kaminari'                 
 #gem 'therubyracer'
 gem 'unicode_utils'
+gem 'foundation-rails'
 
 if ENV["RAILS_ENV"] == "development"
   gem 'thin'

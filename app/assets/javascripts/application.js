@@ -13,3 +13,7 @@
 //= require drg_cms_application
 //= require drg_default_html_editor_application
 //= require www
+
+//= require foundation
+
+$(document).foundation();

@@ -1,0 +1,80 @@
+## Registration form
+---
+table: dc_dummy
+title: New user registration
+#controls: registration
+
+result_set:
+  actions: 
+    1: edit
+    2: delete
+
+  columns:
+    1:  
+      name: username
+form:
+  title:
+    new: New user registration
+    edit: Edit user preferences
+    field: name
+  edit_title: name
+  actions: 
+    1: save
+#    5: 
+#      type: script
+#      caption: Cancle 
+#      js: parent.reload();
+
+  fields:
+    10:
+      name: username
+      type: text_field
+      html:
+        size: 10
+    20:
+      name: title
+      type: text_field
+      html:
+        size: 5
+    30:
+      name: first_name
+      type: text_field
+      html:
+        size: 20
+
+    40:
+      name: last_name
+      type: text_field
+      html:
+        size: 20
+
+    50:
+      name: company
+      type: text_field
+      html:
+        size: 50
+
+    60:
+      name: country
+      type: select
+      eval: DcUser.choices4_country
+      html:
+        include_blank: true      
+
+    70:
+      name: email
+      type: text_field
+      html:
+        size: 30
+
+    80:
+      name: password
+      type: password_field
+      html:
+        size: 20
+
+    90:
+      name: password_confirmation
+      type: password_field
+      html:
+        size: 20

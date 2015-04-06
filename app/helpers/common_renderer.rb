@@ -41,11 +41,11 @@ end
 ########################################################################
 def login
   html = if @parent.session[:user_id].nil?
-    %Q[ #{@parent.link_to('Login:', {controller: 'dc_common', action: 'login', return_to: @parent.request.url}, class: 'link-middle')} ]
+    %Q[ #{@parent.link_to('Login ', {controller: 'dc_common', action: 'login', return_to: @parent.request.url}, class: 'link-middle')} ]
   else
     %Q[
-    #{@parent.link_to('Logout:', { controller: 'dc_common', action: 'logout', return_to: @parent.request.url}, class: 'link-middle')}
-    <span id="user_name">#{@parent.session[:user_name]}<span>
+    #{@parent.link_to('Logout ', { controller: 'dc_common', action: 'logout', return_to: @parent.request.url}, class: 'link-middle')}
+    #{@parent.session[:user_name]}
 ]
 # 
     #{@parent.link_to(@parent.session[:user_name], { controller: 'ankete', poll_id: 'user_preferences', return_to: @parent.request.url }, class: 'podjetnik-link-mali')}

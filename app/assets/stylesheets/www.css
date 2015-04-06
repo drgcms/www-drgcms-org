@@ -7,8 +7,28 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-top: 0em; 
   margin-bottom: 0em;
 }
-a:link, a:active, a:visited { color: #db363a; text-decoration: none; background: transparent;}
-a:hover { text-decoration: none; color: #445;}
+
+#site a:link, #site a:active, #site a:visited { color: #db363a; text-decoration: none; background: transparent;}
+#site a:hover { text-decoration: none; color: #445;}
+
+
+.dc-form-field, .dc-form-label {
+  border-bottom: 0px;
+  color: #444;
+}
+
+.dc-form-label label {
+  padding-left: 0px; 
+}
+
+.dc-color-odd, .dc-color-even {
+  background-color: #fff;
+}
+/*
+.dc-form-li:hover, .dc-form-li-selected {
+background: linear-gradient(#f4f4f4 2%, #fff 100%);  
+}
+*/
 
 #site {
 border-spacing: 0px;
@@ -23,15 +43,13 @@ border-bottom: 4px solid #222;
 #site-top {
 position: relative;
 margin: 0 auto;
-width: 960px;
+max-width: 960px;
 }
 
 #site-main {
-background-color: #f8f8f8;
-
 padding: 0px;
 margin: 0 auto;
-width: 960px;
+max-width: 960px;
 }
 /*
 #page {
@@ -63,11 +81,13 @@ border-left: 1px solid #eee;
 #top-logo sup {
 color: #222;
 /* text-shadow: -1px -1px 1px #fff,  1px 1px 1px #fff;*/
- text-shadow: none;
+text-shadow: none;
 margin-bottom:110px;
+font-size: 0.7em;
 }
 
 #top-logo {
+  font-weight: bold;
 text-shadow: none;
 color: #DB363A;
 text-shadow: 1px 1px 0px #222;
@@ -104,25 +124,29 @@ color:#222;
 }
 
 /* login */
-#login {
-position: absolute;
-border-top: 3px solid #bbb;
-border-left: 3px solid #bbb;
-border-bottom: 3px solid #db363a;
-border-right: 3px solid #db363a;
+.login {
+/* position: absolute; */
+text-align: right;
+/*
+background: url('/assets/tweed.png');
+border-bottom: 4px solid #000;
+border-right: 4px solid #000;
+border-top: 4px solid #db363a;
+border-left: 4px solid #db363a;
+border: 4px solid #000;
+*/
 padding: 5px;
-top: 5px;
-right: 5px;
-box-shadow: 1px 1px #db363a;
+margin-top: 5px;
 color: #fff;
-border-radius: 2px;
+border-radius: 3px;
 }
-#login a {
-color: #fff;
+.login a {
+color: #db363a;
 font-weight: bold;
 }
-#login a:hover {
+.login a:hover {
 text-shadow:   0px 0px 2px #fff;
+color: #000;
 }
 
 /* Polls */

@@ -16,6 +16,12 @@ CKEDITOR.editorConfig = function( config ) {
   config.filebrowserWindowHeight    = 500;
   config.disableNativeSpellChecker = false;
 //  config.skin = 'moonocolor,/skins/ckeditor/moonocolor/';
+
+config.toolbar_basic = [
+    [ 'Save', '-', 'Cut', 'Copy', 'Paste', 'PasteText', '-', 'Undo', 'Redo' ],
+    [ 'Bold', 'Italic', 'Underline', '-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock']
+];
+
 };
 
 
