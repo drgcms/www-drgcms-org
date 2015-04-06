@@ -1,20 +1,20 @@
 PATH
   remote: ../drg_blog_news_forum
   specs:
-    drg_blog_news_forum (0.0.4)
+    drg_blog_news_forum (0.0.5)
       drg_cms
       rails
 
 PATH
   remote: ../drg_books
   specs:
-    drg_books (0.0.3)
+    drg_books (0.0.4)
       drg_cms
 
 PATH
   remote: ../drg_cms
   specs:
-    drg_cms (0.4.56)
+    drg_cms (0.4.57)
       bcrypt
       bson
       jquery-rails
