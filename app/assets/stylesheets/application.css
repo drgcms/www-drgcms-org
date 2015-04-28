@@ -15,3 +15,7 @@
  *= require drg_books
  *= require foundation 
  */
+
+.dc-color-odd, .dc-color-even {
+  background-color: #fff;
+}

@@ -9,7 +9,7 @@ WwwDrgcms::Application.routes.draw do
   
   get '/blog/:name/:link' => 'dc_main#page', :defaults => { path: 'blog' }
   get '/blog/:name' => 'dc_main#page', :defaults => { path: 'blog', link: 'all' }
-  #get '/blog' => 'dc_main#page', :defaults => { path: 'blog', link: 'all' }
+  get '/news/:link' => 'dc_main#page', :defaults => { path: 'news' }
   
   get '/books/:method/:book_id/', to: 'dc_main#page', :defaults => { path: 'books' }
   get '/books/:method/:book_id/:chapter_id', to: 'dc_main#page', :defaults => { path: 'books' }

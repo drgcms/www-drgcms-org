@@ -23,6 +23,8 @@
 
 
 #######################################################################
+# Rake task will update plugins data from rubygems.org site 
+#######################################################################
 namespace :plugins do
   desc 'Update dc_plugins collection with data found on RubyGems web site.'
   task :update, [:name] => :environment do |t, args|

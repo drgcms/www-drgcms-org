@@ -23,6 +23,7 @@ gem 'kaminari'
 #gem 'therubyracer'
 gem 'unicode_utils'
 gem 'foundation-rails'
+gem 'font-awesome-rails'
 
 if ENV["RAILS_ENV"] == "development"
   gem 'thin'

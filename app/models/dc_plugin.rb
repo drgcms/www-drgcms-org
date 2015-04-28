@@ -21,6 +21,11 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
 
+########################################################################
+# Mongoid::Document model for dc_plugin documents.
+# 
+# dc_plugin collection holds data about plugins available for drg_cms project.
+########################################################################
 class DcPlugin
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -41,22 +46,14 @@ class DcPlugin
   field :updated_by,  type: BSON::ObjectId
   
   validates :name,        { presence: true, uniqueness: true }
-  
-#  validates :info,        presence: true  
-#  validates :last_ver,    presence: true  
-#  validates :src_url,     presence: true  
-#  validates :home_url,    presence: true  
-#  validates :doc_url,     presence: true  
-#  validates :authors,     presence: true  
-#  validates :install,     presence: true  
-  
+   
   index( { name: 1 }, { unique: true } )
   index( { type: 1 } )
   
   before_save :do_before_save
   
 #############################################################################
-# Fill search field with values of name and info to simplify searching plugins
+# Fill search field to simplify plugins searching.
 #############################################################################
 def do_before_save
   self.search = UnicodeUtils.downcase("#{self.name} #{self.info}")

@@ -1,3 +1,7 @@
+
+/**************************************************************
+ * Plugins search ajax call.
+ **************************************************************/
 do_plugins_search = function() {
   params = {search: $("#plugins-search").val(), sekcija: $("#plugins-result").val() }
 
@@ -12,7 +16,9 @@ do_plugins_search = function() {
    });  
 }
 
-/*  */
+/**************************************************************
+ * Plugins search callback 
+ **************************************************************/
 $(document).ready(function() {
   $('#plugins-search').on('input', function(e) {
     if ( $("#plugins-search").val().length > 1) do_plugins_search();

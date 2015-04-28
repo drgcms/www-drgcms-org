@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2012-2013 Damjan Rems
+# Copyright (c) 2014+ Damjan Rems
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -21,15 +21,16 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
 
+
 ########################################################################
-#
+# Common renderer holds common rendering methods used by site.
 ########################################################################
 class CommonRenderer
   
 ########################################################################
-#
+# Initialize 
 ########################################################################
-def initialize( parent, opts={} )
+def initialize( parent, opts={} ) #:nodoc:
   @parent   = parent
   @opts     = opts
   @part_css = ''
@@ -37,7 +38,7 @@ def initialize( parent, opts={} )
 end
 
 ########################################################################
-#
+# Renders login link and draws user name an logout link when user is logged in.
 ########################################################################
 def login
   html = if @parent.session[:user_id].nil?
@@ -47,14 +48,12 @@ def login
     #{@parent.link_to('Logout ', { controller: 'dc_common', action: 'logout', return_to: @parent.request.url}, class: 'link-middle')}
     #{@parent.session[:user_name]}
 ]
-# 
-    #{@parent.link_to(@parent.session[:user_name], { controller: 'ankete', poll_id: 'user_preferences', return_to: @parent.request.url }, class: 'podjetnik-link-mali')}
   end
   html
 end
 
 ########################################################################
-#
+# Return html part
 ########################################################################
 def render_html
   method = @opts[:method] || 'list'
@@ -62,7 +61,7 @@ def render_html
 end
 
 ########################################################################
-#
+# Return css part
 ########################################################################
 def render_css
   @part_css
