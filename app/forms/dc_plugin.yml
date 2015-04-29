@@ -1,4 +1,4 @@
-## YAML Template for page
+# Generic form for editing plugins.
 ---
 table: dc_plugin
 

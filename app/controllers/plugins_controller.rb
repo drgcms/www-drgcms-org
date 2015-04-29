@@ -1,12 +1,8 @@
 class PluginsController < DcApplicationController
 
-def _del_page
-  params[:path] = 'plugins'
-  dc_process_default_request
-end
-
 ####################################################################
-# Ajax search call 
+# Ajax plugins search call. Return is a json response with list of plugins 
+# containing searched string.
 ####################################################################
 def search
   return dc_render_404 unless request.xhr? # ajax only
