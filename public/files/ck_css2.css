@@ -24,3 +24,9 @@ background: #eee;
 border: 1px solid #ccc;
 padding: 4px;
 }
+
+.dc-forum-quote {
+  border-left: 2px solid #666;
+  padding-left: 4px;
+  color: #666;
+}

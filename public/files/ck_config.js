@@ -15,6 +15,7 @@ CKEDITOR.editorConfig = function( config ) {
   config.filebrowserWindowWidth     = 800;
   config.filebrowserWindowHeight    = 500;
   config.disableNativeSpellChecker = false;
+  config.extraAllowedContent = 'div(*)';
 //  config.skin = 'moonocolor,/skins/ckeditor/moonocolor/';
 
 config.toolbar_basic = [
