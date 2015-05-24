@@ -50,7 +50,7 @@ GEM
       rails
     drg_books (0.5.0)
       drg_cms
-    drg_cms (0.5.0)
+    drg_cms (0.5.1)
       bcrypt
       bson
       font-awesome-rails
@@ -80,7 +80,7 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (5.0.3)
+    jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.2)
     kaminari (0.16.3)
@@ -109,7 +109,7 @@ GEM
     non-stupid-digest-assets (1.0.4)
     optionable (0.2.0)
     origin (2.1.1)
-    puma (2.11.2)
+    puma (2.11.3)
       rack (>= 1.1, < 2.0)
     rack (1.6.1)
     rack-test (0.6.3)
@@ -146,10 +146,10 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    sass (3.4.13)
-    sprockets (3.0.3)
+    sass (3.4.14)
+    sprockets (3.1.0)
       rack (~> 1.0)
-    sprockets-rails (2.3.0)
+    sprockets-rails (2.3.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
