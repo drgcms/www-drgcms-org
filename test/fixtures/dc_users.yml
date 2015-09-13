@@ -1,0 +1,13 @@
+rems:
+  username: rems
+  name: Damjan
+  password_digest: '$2a$10$ifVfdEeCCetvUDl1n2JgCuTPdyyLyl6tXjEX5YlKJjzWErN4lzBkC'
+  dc_policy_roles:
+  - admin
+
+guest:
+  username: guest
+  name: Guest User
+  password_digest: '$2a$10$ifVfdEeCCetvUDl1n2JgCuTPdyyLyl6tXjEX5YlKJjzWErN4lzBkC'
+  dc_policy_roles:
+  - admin

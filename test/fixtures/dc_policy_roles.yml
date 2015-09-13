@@ -1,0 +1,11 @@
+sa:
+  name: superadmin
+  system_name: superadmin
+
+guest:
+  name: guest
+  system_name: guest
+
+admin:
+  name: Administrators
+  system_name: admin
