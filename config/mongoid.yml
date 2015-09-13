@@ -11,7 +11,7 @@ development:
 test:
   sessions:
     default:
-      database: rails_project_test
+      database: testi
       hosts:
         - localhost:27017
       options:
