@@ -1,56 +1,20 @@
-GEM
-  remote: https://rubygems.org/
+PATH
+  remote: ../drg_blog_news_forum
   specs:
-    actionmailer (4.2.1)
-      actionpack (= 4.2.1)
-      actionview (= 4.2.1)
-      activejob (= 4.2.1)
-      mail (~> 2.5, >= 2.5.4)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
-    actionpack (4.2.1)
-      actionview (= 4.2.1)
-      activesupport (= 4.2.1)
-      rack (~> 1.6)
-      rack-test (~> 0.6.2)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
-      rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    actionview (4.2.1)
-      activesupport (= 4.2.1)
-      builder (~> 3.1)
-      erubis (~> 2.7.0)
-      rails-dom-testing (~> 1.0, >= 1.0.5)
-      rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    activejob (4.2.1)
-      activesupport (= 4.2.1)
-      globalid (>= 0.3.0)
-    activemodel (4.2.1)
-      activesupport (= 4.2.1)
-      builder (~> 3.1)
-    activerecord (4.2.1)
-      activemodel (= 4.2.1)
-      activesupport (= 4.2.1)
-      arel (~> 6.0)
-    activeresource (4.0.0)
-      activemodel (~> 4.0)
-      activesupport (~> 4.0)
-      rails-observers (~> 0.1.1)
-    activesupport (4.2.1)
-      i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
-      minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
-      tzinfo (~> 1.1)
-    arel (6.0.0)
-    bcrypt (3.1.10)
-    bson (2.3.0)
-    builder (3.2.2)
-    connection_pool (2.2.0)
     drg_blog_news_forum (0.5.0)
       drg_cms
       rails
+
+PATH
+  remote: ../drg_books
+  specs:
     drg_books (0.5.0)
       drg_cms
-    drg_cms (0.5.2)
+
+PATH
+  remote: ../drg_cms
+  specs:
+    drg_cms (0.5.5)
       bcrypt
       bson
       font-awesome-rails
@@ -59,40 +23,95 @@ GEM
       kaminari
       mongoid
       rails
+
+PATH
+  remote: ../drg_default_html_editor
+  specs:
     drg_default_html_editor (0.5.0)
       drg_cms
       el_finder
       rails
+
+GEM
+  remote: https://rubygems.org/
+  remote: http://gems.ozs.si/
+  specs:
+    actionmailer (4.2.3)
+      actionpack (= 4.2.3)
+      actionview (= 4.2.3)
+      activejob (= 4.2.3)
+      mail (~> 2.5, >= 2.5.4)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+    actionpack (4.2.3)
+      actionview (= 4.2.3)
+      activesupport (= 4.2.3)
+      rack (~> 1.6)
+      rack-test (~> 0.6.2)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionview (4.2.3)
+      activesupport (= 4.2.3)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    activejob (4.2.3)
+      activesupport (= 4.2.3)
+      globalid (>= 0.3.0)
+    activemodel (4.2.3)
+      activesupport (= 4.2.3)
+      builder (~> 3.1)
+    activerecord (4.2.3)
+      activemodel (= 4.2.3)
+      activesupport (= 4.2.3)
+      arel (~> 6.0)
+    activeresource (4.0.0)
+      activemodel (~> 4.0)
+      activesupport (~> 4.0)
+      rails-observers (~> 0.1.1)
+    activesupport (4.2.3)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    arel (6.0.3)
+    bcrypt (3.1.10)
+    bson (3.2.1)
+    builder (3.2.2)
+    connection_pool (2.2.0)
+    daemons (1.2.3)
     el_finder (1.1.12)
       image_size (>= 1.0.0)
     erubis (2.7.0)
-    execjs (2.5.2)
-    font-awesome-rails (4.3.0.0)
+    eventmachine (1.0.8)
+    execjs (2.6.0)
+    font-awesome-rails (4.4.0.0)
       railties (>= 3.2, < 5.0)
     foundation-rails (5.5.2.1)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
-    globalid (0.3.5)
+    globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
     image_size (1.4.1)
-    jquery-rails (4.0.3)
+    jquery-rails (4.0.4)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
-    json (1.8.2)
+    json (1.8.3)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    loofah (2.0.2)
+    loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.1)
     mini_portile (0.6.2)
-    minitest (5.7.0)
+    minitest (5.8.0)
     mongo_session_store-rails4 (6.0.0)
       actionpack (>= 3.1)
     mongoid (4.0.2)
@@ -100,8 +119,11 @@ GEM
       moped (~> 2.0.0)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
-    moped (2.0.4)
-      bson (~> 2.2)
+    mongoid-fixture_set (1.4.1)
+      activesupport (~> 4.0)
+      mongoid (~> 4.0)
+    moped (2.0.7)
+      bson (~> 3.0)
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
     nokogiri (1.6.6.2)
@@ -109,25 +131,23 @@ GEM
     non-stupid-digest-assets (1.0.4)
     optionable (0.2.0)
     origin (2.1.1)
-    puma (2.11.3)
-      rack (>= 1.1, < 2.0)
-    rack (1.6.1)
+    rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails (4.2.1)
-      actionmailer (= 4.2.1)
-      actionpack (= 4.2.1)
-      actionview (= 4.2.1)
-      activejob (= 4.2.1)
-      activemodel (= 4.2.1)
-      activerecord (= 4.2.1)
-      activesupport (= 4.2.1)
+    rails (4.2.3)
+      actionmailer (= 4.2.3)
+      actionpack (= 4.2.3)
+      actionview (= 4.2.3)
+      activejob (= 4.2.3)
+      activemodel (= 4.2.3)
+      activerecord (= 4.2.3)
+      activesupport (= 4.2.3)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.2.1)
+      railties (= 4.2.3)
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.6)
+    rails-dom-testing (1.0.7)
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
@@ -135,24 +155,23 @@ GEM
       loofah (~> 2.0)
     rails-observers (0.1.2)
       activemodel (~> 4.0)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.4)
-    rails_stdout_logging (0.0.3)
-    railties (4.2.1)
-      actionpack (= 4.2.1)
-      activesupport (= 4.2.1)
+    railties (4.2.3)
+      actionpack (= 4.2.3)
+      activesupport (= 4.2.3)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    sass (3.4.14)
-    sprockets (3.1.0)
+    sass (3.4.16)
+    sprockets (3.3.1)
       rack (~> 1.0)
-    sprockets-rails (2.3.1)
+    sprockets-rails (2.3.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
     thor (0.19.1)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
@@ -168,10 +187,10 @@ PLATFORMS
 DEPENDENCIES
   activeresource
   bcrypt
-  drg_blog_news_forum
-  drg_books
-  drg_cms
-  drg_default_html_editor
+  drg_blog_news_forum!
+  drg_books!
+  drg_cms!
+  drg_default_html_editor!
   font-awesome-rails
   foundation-rails
   jquery-rails
@@ -179,10 +198,10 @@ DEPENDENCIES
   kaminari
   mongo_session_store-rails4
   mongoid
+  mongoid-fixture_set
   non-stupid-digest-assets
-  puma
   rails
-  rails_12factor
   sprockets-rails
+  thin
   uglifier
   unicode_utils
