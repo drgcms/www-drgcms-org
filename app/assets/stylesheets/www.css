@@ -11,7 +11,6 @@ p, h1, h2, h3, h4, h5, h6 {
 #site a:link, #site a:active, #site a:visited { color: #db363a; text-decoration: none; background: transparent;}
 #site a:hover { text-decoration: none; color: #445;}
 
-
 .dc-form-field, .dc-form-label {
   border-bottom: 0px;
   color: #444;
