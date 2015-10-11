@@ -45,7 +45,7 @@ namespace :plugins do
       plugin.info    = json["info"]
       plugin.home_url  = json["homepage_uri"]
       plugin.src_url   = json["source_code_uri"]
-      plugin.doc_url   = json["homepage_uri"]
+      plugin.doc_url   = json["documentation_uri"]
       plugin.save
     end
   end
