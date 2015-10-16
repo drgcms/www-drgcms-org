@@ -1,25 +1,23 @@
 development:
-  sessions:
+  clients:
     default:
       database: rails_project_development
       hosts:
         - localhost:27017
-      options:
   options:
     raise_not_found_error: false # by rems
 
 test:
-  sessions:
+  clients:
     default:
       database: testi
       hosts:
         - localhost:27017
-      options:
   options:
     raise_not_found_error: false # by rems
 
 production:
-  sessions:
+  clients:
     default:
       uri: <%= ENV['MONGOHQ_URL'] %>
   options:
