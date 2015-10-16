@@ -13,7 +13,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'uglifier'      #, '>= 1.0.3'
 gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
 
-gem 'mongoid', '~> 4'# github: 'mongoid/mongoid'
+gem 'mongoid' # github: 'mongoid/mongoid'
 gem 'mongo_session_store-rails4'#, github: 'maisaengineering/mongoid4-session-store'
 
 gem 'jquery-rails'
@@ -27,7 +27,6 @@ gem 'font-awesome-rails'
 
 if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'thin'
-  gem 'mongoid-fixture_set'
   
   gem 'drg_cms', :path => '../drg_cms'
   gem 'drg_default_html_editor', :path => '../drg_default_html_editor'
