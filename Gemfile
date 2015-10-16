@@ -13,7 +13,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'uglifier'      #, '>= 1.0.3'
 gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
 
-gem 'mongoid' # github: 'mongoid/mongoid'
+gem 'mongoid', '~> 4' # github: 'mongoid/mongoid'
 gem 'mongo_session_store-rails4'#, github: 'maisaengineering/mongoid4-session-store'
 
 gem 'jquery-rails'

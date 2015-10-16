@@ -44,6 +44,7 @@ GEM
     bcrypt (3.1.10)
     bson (3.2.6)
     builder (3.2.2)
+    connection_pool (2.2.0)
     drg_blog_news_forum (0.5.1)
       drg_cms
       rails
@@ -92,18 +93,21 @@ GEM
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.1)
-    mongo (2.1.2)
-      bson (~> 3.0)
     mongo_session_store-rails4 (6.0.0)
       actionpack (>= 3.1)
-    mongoid (5.0.0)
+    mongoid (4.0.2)
       activemodel (~> 4.0)
-      mongo (~> 2.1)
+      moped (~> 2.0.0)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
+    moped (2.0.7)
+      bson (~> 3.0)
+      connection_pool (~> 2.0)
+      optionable (~> 0.2.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     non-stupid-digest-assets (1.0.5)
+    optionable (0.2.0)
     origin (2.1.1)
     puma (2.14.0)
     rack (1.6.4)
@@ -173,7 +177,7 @@ DEPENDENCIES
   jquery-ui-rails
   kaminari
   mongo_session_store-rails4
-  mongoid
+  mongoid (~> 4)
   non-stupid-digest-assets
   puma
   rails
