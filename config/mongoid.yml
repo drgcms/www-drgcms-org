@@ -1,5 +1,5 @@
 development:
-  sessions:
+  clients:
     default:
       database: rails_project_development
       hosts:
@@ -9,7 +9,7 @@ development:
     raise_not_found_error: false # by rems
 
 test:
-  sessions:
+  clients:
     default:
       database: testi
       hosts:
@@ -19,7 +19,7 @@ test:
     raise_not_found_error: false # by rems
 
 production:
-  sessions:
+  clients:
     default:
       uri: <%= ENV['MONGOHQ_URL'] %>
   options:
