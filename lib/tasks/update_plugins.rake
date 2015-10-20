@@ -44,7 +44,9 @@ namespace :plugins do
       plugin.authors = json["authors"]
       plugin.info    = json["info"]
       plugin.home_url  = json["homepage_uri"]
-      plugin.src_url   = json["source_code_uri"]
+#      plugin.src_url   = json["source_code_uri"]
+# this will do until rubygems gets source_code option
+      plugin.src_url   = 'https://github.com/drgcms/' + plugin.name.gsub('_','-')
       plugin.doc_url   = json["documentation_uri"]
       plugin.save
     end
