@@ -47,7 +47,7 @@ GEM
     drg_blog_news_forum (0.5.2)
       drg_cms
       rails
-    drg_books (0.5.2)
+    drg_books (0.5.3.1)
       drg_cms
     drg_cms (0.5.6)
       bcrypt
@@ -91,7 +91,7 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.6.2)
     mini_portile (0.6.2)
-    minitest (5.8.1)
+    minitest (5.8.2)
     mongo (2.1.2)
       bson (~> 3.0)
     mongo_session_store-rails4 (6.0.0)
