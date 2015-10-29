@@ -3,10 +3,6 @@ body {
 background-color: #f8f8f8;
 font-family: Noto Sans,Helvetica;
 }
-p, h1, h2, h3, h4, h5, h6 { 
-margin-top: 0em; 
-margin-bottom: 0em;
-}
 
 #site a:link, #site a:active, #site a:visited { color: #db363a; text-decoration: none; background: transparent;}
 #site a:hover { text-decoration: none; color: #445;}
@@ -191,4 +187,13 @@ padding: 4px;
 .blog-entry a {
 font-size: 1.4em;
 padding-bottom: 10px;
+}
+
+/* Needed because of foundation */
+.cmsedit-menu ul li ul {
+left: 0px;
+}
+
+.cmsedit-menu ul li ul li ul {
+left: 85%;
 }

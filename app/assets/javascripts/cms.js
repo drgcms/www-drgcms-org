@@ -6,6 +6,6 @@
 //
 //= require drg_cms_cms
 //= require drg_default_html_editor_cms
-//= require www
+//= #require www
 //
 //= require drg_default_html_editor/elfinder/js/i18n/elfinder.sl
