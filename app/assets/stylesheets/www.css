@@ -12,6 +12,11 @@ border-bottom: 0px;
 color: #444;
 }
 
+sup {
+vertical-align: super;
+font-size: smaller;
+}
+
 .dc-form-label label {
   padding-left: 0px; 
 }
@@ -196,4 +201,11 @@ left: 0px;
 
 .cmsedit-menu ul li ul li ul {
 left: 85%;
+}
+
+#last-news, #last-blogs {
+font-size: 0.8em;
+margin-top: 10px;
+background-image: linear-gradient(180deg, #f8f8f8 10%, #eee 100%);
+padding: 6px;
 }

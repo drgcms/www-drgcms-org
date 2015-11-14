@@ -36,7 +36,6 @@ namespace :chapters do
           text.save
         end
       end
-#      plugin.save
     end
   end
 end
