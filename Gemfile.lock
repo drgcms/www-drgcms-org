@@ -49,7 +49,7 @@ GEM
       rails
     drg_books (0.5.3.1)
       drg_cms
-    drg_cms (0.5.7)
+    drg_cms (0.5.8)
       bcrypt
       bson
       font-awesome-rails
@@ -181,3 +181,6 @@ DEPENDENCIES
   sprockets-rails
   uglifier
   unicode_utils
+
+BUNDLED WITH
+   1.10.6
