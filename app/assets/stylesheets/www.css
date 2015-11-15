@@ -205,7 +205,8 @@ left: 85%;
 
 #last-news, #last-blogs {
 font-size: 0.8em;
-margin-top: 10px;
+margin-top: 5px;
+margin-bottom: 5px;
 background-image: linear-gradient(180deg, #f8f8f8 10%, #eee 100%);
 padding: 6px;
 }
