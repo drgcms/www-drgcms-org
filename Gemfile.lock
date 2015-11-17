@@ -44,7 +44,7 @@ GEM
     bcrypt (3.1.10)
     bson (3.2.6)
     builder (3.2.2)
-    drg_blog_news_forum (0.5.4)
+    drg_blog_news_forum (0.5.5)
       drg_cms
       rails
     drg_books (0.5.3.1)
@@ -101,7 +101,7 @@ GEM
       mongo (~> 2.1)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
-    nokogiri (1.6.6.2)
+    nokogiri (1.6.6.3)
       mini_portile (~> 0.6.0)
     non-stupid-digest-assets (1.0.5)
     origin (2.1.1)
