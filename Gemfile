@@ -27,6 +27,7 @@ gem 'font-awesome-rails'
 
 if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'thin'
+  gem 'minitest'
   
   gem 'drg_cms', :path => '../drg_cms'
   gem 'drg_default_html_editor', :path => '../drg_default_html_editor'

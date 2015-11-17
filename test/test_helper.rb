@@ -8,14 +8,17 @@ class ActiveSupport::TestCase
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
   # -- they do not yet inherit this setting
-  #fixtures :all
+#  fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  include Mongoid::FixtureSet::TestHelper
-  self.fixture_path = "#{Rails.root}/test/fixtures"  
+  #include Mongoid::FixtureSet::TestHelper
+  #self.fixture_path = "#{Rails.root}/test/fixtures"
+  require 'fixtures/test_data.rb'
 end
 
 def db_clear
-#  DcUser.all.delete
-#  DcSite.all.delete
+  DcUser.all.delete
+  DcSite.all.delete
+  DcPermission.all.delete
+  DcPolicyRole.all.delete
 end
