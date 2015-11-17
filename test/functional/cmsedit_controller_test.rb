@@ -1,10 +1,9 @@
 require './test/test_helper.rb'
-require 'dc_user'
 
 class CmseditControllerTest < ActionController::TestCase
 
 def login(usr,pwd)
-  #post '/dc_common/login', 'record[username]' => 'rems', 'record[password]' => 'mojCMS1513'
+  #post '/dc_common/login', 'record[username]' => 'rems', 'record[password]' => 'secret'
     old_controller = @controller
 
     # use the login controller
@@ -21,27 +20,24 @@ def login(usr,pwd)
 end
  
 test 'test cmsedit' do
-#  Fabricate(:dc_user)
-  p DcUser.all.size
 
-#  Fabricate(:dc_site)
+  p DcUser.all.size
   p DcSite.all.size
 
-  login('guest','secret')
+  login('rems','secret')
   
   get :index, table: :dc_user, formname: 'dc_user'
   assert_response :ok
   
-#  p @response
-  assert_select 'div', 'dc-form-error'
-
-  assert_select 'div#.dc-form-frame' #, 'Should have div dc-form-frame'
+  puts assert_select 'div.dc-form-error'#, 'Should have div dc-form-frame'
   
-  assert_select "ul#.dc-action-menu" do
-    assert_select "li", 4
+  assert_select "ul.dc-action-menu" do
+    assert_select "li", 3
   end  
-
-
+  
+#  p @response
+ 
+  p ENV['RAILS_ENV']
 end
 
 db_clear
