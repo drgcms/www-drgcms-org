@@ -44,7 +44,7 @@ GEM
     bcrypt (3.1.10)
     bson (3.2.6)
     builder (3.2.2)
-    drg_blog_news_forum (0.5.5)
+    drg_blog_news_forum (0.5.5.1)
       drg_cms
       rails
     drg_books (0.5.3.1)
