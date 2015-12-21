@@ -21,13 +21,26 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
 
+def check_for_replies(collection, days=100)
+  collection.all.each do |document|
+    title = document.respond_to?(:title) ? :title : :subject
+#    p collection.class, document[title]
+    document.dc_replies.each do |reply|
+      if reply.created_at > days.days.ago
+        p [document[title], reply.subject, reply.created_at]
+#        reply.delete
+      end
+    end
+  end
+end
 
 #######################################################################
-# Rake task will update plugins data from rubygems.org site 
+# This was when I needed to update source data, which was generated
+# by netbeans. 
 #######################################################################
-namespace :chapters do
+namespace :utilities do
   desc 'Remove unnecessary css from book chapters'
-  task :update, [:name] => :environment do |t, args|
+  task :remove_font_from_books, [:name] => :environment do |t, args|
     DcBookChapter.where(active: true).each do |chapter|
       chapter.dc_book_texts.each do |text|
         if text.body.match("font-family: 'DejaVu Sans Mono';")
@@ -38,4 +51,13 @@ namespace :chapters do
       end
     end
   end
+
+  desc 'List news, blogs replies from last day, week, ..'
+  task :list_replies, [:name] => :environment do |t, args|
+    days = ARGV[1].split('=').last.to_i
+    check_for_replies(DcBookChapter,days)
+    check_for_replies(DcNews,days)
+    check_for_replies(DcBlog,days)
+  end
+
 end
