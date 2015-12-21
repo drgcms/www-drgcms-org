@@ -11,10 +11,12 @@ admin_role = DcPolicyRole.create!(name: 'Administrators', system_name: 'admin')
 
 # collection Permissions
 default_permission = DcPermission.create!(table_name: 'Default permission',is_default: true)
-rule1 = DcPolicyRule.new(dc_policy_role: sa_role, permission: 1)
-rule2 = DcPolicyRule.new(dc_policy_role: guest_role, permission: 2)
+rule1 = DcPolicyRule.new(dc_policy_role: sa_role, permission: 128)
+rule2 = DcPolicyRule.new(dc_policy_role: guest_role, permission: 0)
+rule3 = DcPolicyRule.new(dc_policy_role: admin_role, permission: 64)
 default_permission.dc_policy_rules << rule1
 default_permission.dc_policy_rules << rule2
+default_permission.dc_policy_rules << rule3
 
 # SITE
 site = DcSite.create!(
@@ -37,10 +39,10 @@ default_policy = DcPolicy.new(
   name: 'Default policy')
 site.dc_policies << default_policy
 
-rule1 = DcPolicyRule.new(dc_policy_role: sa_role, permission: 2)
-rule2 = DcPolicyRule.new(dc_policy_role: guest_role, permission: 1)
-default_policy.dc_policy_rules << rule1
+rule2 = DcPolicyRule.new(dc_policy_role: admin_role, permission: 1)
+rule3 = DcPolicyRule.new(dc_policy_role: guest_role, permission: 2)
 default_policy.dc_policy_rules << rule2
+default_policy.dc_policy_rules << rule3
 
 site.save
 
@@ -49,9 +51,10 @@ testsite = DcSite.create!(name: 'test', alias_for: "www.mysite.com")
 
 # Users
 rems = DcUser.new(
-  username: 'rems',
-  name: 'Damjan',
+  username: 'admin',
+  name: 'Admin User',
   password_digest: '$2a$10$ifVfdEeCCetvUDl1n2JgCuTPdyyLyl6tXjEX5YlKJjzWErN4lzBkC')
+rems.save
 role1 = DcUserRole.new(dc_policy_role: admin_role, active: true)
 rems.dc_user_roles << role1
 
@@ -59,4 +62,5 @@ guest = DcUser.new(
   username: 'guest',
   name: 'Guest User',
   password_digest: '$2a$10$ifVfdEeCCetvUDl1n2JgCuTPdyyLyl6tXjEX5YlKJjzWErN4lzBkC')
+guest.save
 
