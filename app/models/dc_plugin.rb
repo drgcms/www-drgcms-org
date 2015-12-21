@@ -22,7 +22,26 @@
 #++
 
 ########################################################################
-# Mongoid::Document model for dc_plugin documents.
+# == Schema information
+#
+# Collection name: dc_plugin : Plugins
+#
+#  _id                  BSON::ObjectId       _id
+#  created_at           Time                 created_at
+#  updated_at           Time                 updated_at
+#  name                 String               Name of plugin
+#  info                 String               Plugin information
+#  version              String               Version of last gem published on RubyGems
+#  home_url             String               Homepage URL
+#  src_url              String               Source URL
+#  doc_url              String               Documentation URL
+#  authors              String               Authors
+#  install              String               Installation routine
+#  type                 String               Type of plugin as defined
+#  search               String               Search field
+#  active               Mongoid::Boolean     active
+#  created_by           BSON::ObjectId       created_by
+#  updated_by           BSON::ObjectId       updated_by
 # 
 # dc_plugin collection holds data about plugins available for drg_cms project.
 ########################################################################

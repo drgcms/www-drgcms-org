@@ -1,0 +1,83 @@
+# Filter template
+---
+table: dc_site
+# default table. Formname used for setting field types
+formname: dc_site
+title: Filter title
+filter:
+- 
+  condition: and
+  rules:
+  - 
+    field: name
+    input: 1
+    input: text_field
+    operation: gt,lt,ge,le,eq,in,like
+    value: 1234
+    value:
+      eval: @session[:user_id]
+  - 
+    condition: or
+    field: name
+    operation: gt,lt,ge,le,eq,in
+    value: 
+      const: 1234
+      eval: @session[:user_id]
+      free: 1
+-
+  condition: and
+  field: name
+  operation: gt,lt,ge,le,eq,in
+  value: 
+    const: 1234
+    eval: @session[:user_id]
+    free: 1
+
+fields:
+  10:
+    name: name
+    type: text_field
+    html:
+      size: 50
+  20:
+    name: info
+    type: text_area
+    html:
+      size: 80x6
+  30:
+    name: version
+    type: text_field
+    html:
+      size: 10
+  40:
+    name: type
+    type: select
+    choices: Editor extension:1,Application plugin:2
+  50:
+    name: authors
+    type: text_field
+    html:
+      size: 50
+  60:
+    name: home_url
+    type: text_field
+    html:
+      size: 50
+  70:
+    name: src_url
+    type: text_field
+    html:
+      size: 50
+  80:
+    name: doc_url
+    type: text_field
+    html:
+      size: 50
+  90:
+    name: install
+    type: text_area
+    html:
+      size: 80x6
+  100:
+    name: active
+    type: check_box

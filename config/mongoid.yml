@@ -1,9 +1,10 @@
 development:
   clients:
     default:
-      database: rails_project_development
-      hosts:
-        - localhost:27017
+      uri: <%= ENV['MONGOHQ_URL'] %>      
+#      database: rails_project_development
+#      hosts:
+#        - localhost:27017
       options:
   options:
     raise_not_found_error: false # by rems
