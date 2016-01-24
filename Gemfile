@@ -22,7 +22,7 @@ gem 'jquery-ui-rails'
 gem 'kaminari'                 
 #gem 'therubyracer'
 gem 'unicode_utils'
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5'
 gem 'font-awesome-rails'
 
 if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
