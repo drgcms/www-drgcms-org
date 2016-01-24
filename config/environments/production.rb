@@ -79,6 +79,6 @@ WwwDrgcms::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
   
 # by Rems
-  p '+++++',config.assets.precompile
-  config.assets.precompile += %w( cms.css cms.js )
+#  p '+++++',config.assets.precompile
+#  config.assets.precompile += %w( cms.css cms.js )
 end

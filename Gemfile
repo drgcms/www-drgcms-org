@@ -16,7 +16,7 @@ gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets'
 gem 'mongoid', '~> 5' # github: 'mongoid/mongoid'
 gem 'mongo_session_store-rails4'#, github: 'maisaengineering/mongoid4-session-store'
 
-gem 'jquery-rails'
+gem 'jquery-rails'#, '= 4.0.5'
 gem 'jquery-ui-rails'
 
 gem 'kaminari'                 

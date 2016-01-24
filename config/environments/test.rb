@@ -35,5 +35,5 @@ WwwDrgcms::Application.configure do
   config.active_support.deprecation = :stderr
   
 # by Rems
-  config.assets.precompile += %w( cms.css cms.js )
+#  config.assets.precompile += %w( cms.css cms.js )
 end
