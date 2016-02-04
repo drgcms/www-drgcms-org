@@ -1,3 +1,6 @@
+
+ruby "2.2.4"
+
 ENV["RAILS_ENV"] ||= "development"
 
 source 'https://rubygems.org'
@@ -22,7 +25,7 @@ gem 'jquery-ui-rails'
 gem 'kaminari'                 
 #gem 'therubyracer'
 gem 'unicode_utils'
-gem 'foundation-rails', '~> 5'
+gem 'foundation-rails'#, '~> 5'
 gem 'font-awesome-rails'
 
 if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
