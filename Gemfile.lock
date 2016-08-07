@@ -50,7 +50,7 @@ GEM
       rails
     drg_books (0.5.3.1)
       drg_cms
-    drg_cms (0.5.10)
+    drg_cms (0.5.10.7)
       bcrypt
       bson
       font-awesome-rails
@@ -58,9 +58,9 @@ GEM
       jquery-ui-rails
       kaminari
       mongoid
-      rails
+      rails (~> 4)
       sort_alphabetical
-    drg_default_html_editor (0.5.0)
+    drg_default_html_editor (0.5.1)
       drg_cms
       el_finder
       rails
