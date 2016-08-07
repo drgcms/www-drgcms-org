@@ -1,0 +1,37 @@
+# Generic form for editing plugins.
+---
+table: dc_test
+
+index:
+  actions: standard
+
+result_set:
+  actions: standard
+
+  columns:
+    1:  
+      name: ip
+      style: "text-align: left;"
+    2:  
+      name: created_at
+      format: '%d.%m.%Y'
+
+form:
+  edit_title: name
+  actions: standard
+
+  fields:
+    10:
+      name: created_at
+      type: readonly
+      format: '%d.%m.%Y'
+    20:
+      name: ip
+      type: text_field
+      html:
+        size: 30
+    30:
+      name: data
+      type: text_area
+      html:
+        size: 80x10

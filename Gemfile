@@ -1,5 +1,5 @@
 
-ruby "2.2.4"
+#ruby "2.2.4"
 
 ENV["RAILS_ENV"] ||= "development"
 
@@ -8,7 +8,7 @@ source 'https://rubygems.org'
 
 #ENV["RAILS_ENV"] = "production" if ENV["OPENSHIFT_RUBY_VERSION"]
 
-gem 'rails' #, '3.2.13'
+gem 'rails', '~> 4'
 gem 'activeresource'
 gem 'bcrypt' # , '~> 3.0.0'
 

@@ -20,6 +20,7 @@ WwwDrgcms::Application.routes.draw do
 
   get '/plugins' => 'dc_main#page', :defaults => { path: 'plugins' }
   get '/plugins/search' => 'plugins#search'
+  get '/dc_test' => 'dc_test#index' 
 
 #  match 'cmsedit/login' => 'cmsedit#login', via: [:get]  
   resources :cmsedit

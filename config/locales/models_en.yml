@@ -42,6 +42,13 @@ en:
         type: Plugin type
         search: Search
 
+      dc_test:
+        tabletitle: Test
+
+        data: Data
+        created_at: Created at
+        ip: ip
+
     help:
       dc_plugin:
         name: Name of plugin
