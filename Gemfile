@@ -13,10 +13,8 @@ gem 'activeresource'
 gem 'bcrypt' # , '~> 3.0.0'
 
 gem 'sass-rails'
-gem 'compass'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'uglifier'      #, '>= 1.0.3'
-gem 'coffee-rails'
 gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
 
 gem 'mongoid', '~> 5' # github: 'mongoid/mongoid'

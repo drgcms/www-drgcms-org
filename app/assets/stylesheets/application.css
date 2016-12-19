@@ -10,10 +10,10 @@
  *
  *= require drg_cms_application
  *= require drg_default_html_editor_application 
- *= require www
  *= require drg_blog_news_forum
  *= require drg_books
  *= require foundation_and_overrides  
+ *= require www
  */
 
 .dc-color-odd, .dc-color-even {

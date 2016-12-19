@@ -1,212 +1,72 @@
-/* #004A4A #47B8B8 #23B8DC */
 body {
-background-color: #f8f8f8;
-font-family: Noto Sans,Helvetica;
+/*  background-color: #222;*/
+}
+.wrap {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
 }
 
-#site a:link, #site a:active, #site a:visited { color: #db363a; text-decoration: none; background: transparent;}
-#site a:hover { text-decoration: none; color: #445;}
-
-.dc-form-field, .dc-form-label {
-border-bottom: 0px;
-color: #444;
+/************* TOP BAR ************/
+.top-bar {
+  color: #fff;
+  background-color: #222;
+}
+.top-bar-title a {
+  font-size: 3em;
+  color: red;
+}
+.top-bar-title sup {
+  color: white;
+  font-size: 0.6em;
 }
 
-sup {
-vertical-align: super;
-font-size: smaller;
+.menu a {
+  font-size: 1.5em;
+  padding:1em;
 }
 
-.dc-form-label label {
-  padding-left: 0px; 
-}
-/*
-.dc-color-odd, .dc-color-even {
-  background-color: #fff;
-}
-*/
-/*
-.dc-form-li:hover, .dc-form-li-selected {
-background: linear-gradient(#f4f4f4 2%, #fff 100%);  
-}
-*/
-
-#site {
-border-spacing: 0px;
-text-align: left;
+.top-bar-right .login {
+  padding-top: 10px;
 }
 
-#site-top-bg {
-background: url('/assets/tweed.png');
-border-bottom: 4px solid #222;
+.top1 { padding-bottom: 0px;}
+.top2 { padding-top: 0px;}
+
+/************* MAIN ************/
+.main {
+  padding: 40px 0px;
+  background-color: #888;
+  font-size: 16px;
 }
 
-#site-top {
-position: relative;
-margin: 0 auto;
-max-width: 960px;
+.main .column {
+margin: 20px 0px;
 }
 
-#site-main {
-padding: 0px;
-margin: 0 auto;
-max-width: 960px;
-}
-/*
-#page {
-width: 75%;
-float: left;
-}
-#site-left {
-width: 75%;
-float: left;
+.main hr {
+  border: 1px solid #999;
 }
 
-#site-right {
-width: 24%;
-float: right;
-}
-*/
-
-#ad-right {
-/*
-padding: 10px 5px;
-background-color: #ccc;
-border-right: 1px solid #aaa;
-border-bottom: 1px solid #aaa;
-border-top: 1px solid #eee;
-border-left: 1px solid #eee;
-*/
+.hero {
+  height: 200px;
+  background: url(/assets/tweed.png);
 }
 
-#top-logo sup {
-color: #222;
-/* text-shadow: -1px -1px 1px #fff,  1px 1px 1px #fff;*/
-text-shadow: none;
-margin-bottom:110px;
-font-size: 0.7em;
+/************* FOOTER ************/
+footer {
+  padding:40px 0;
+  height: 200px;
+  background-color: #222;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
 }
 
-#top-logo {
-font-weight: bold;
-text-shadow: none;
-color: #DB363A;
-text-shadow: 1px 1px 0px #222;
-text-shadow: -1px -1px 6px #fff,  1px 1px 6px #fff;
+footer h3 {
+  font-size: 1.4em;
+  color: rgba(255,255,255,0.9);
 }
 
-.dc-features {
-width: 880px;
-background-color: #23B8DC;
-border: 4px solid #000;
-padding: 6px;
-color: #fff;
-}
-
-/* plugins */
-.plugin {
-margin-top: 20px; 
-}
-.plugin-info {
-font-size: 1.2em;
-}
-
-#plugin{
-font-size: 1.2em;
-}
-#plugin-ver {
-color: #db363a;
-font-size: 0.8em;
-}
-#plugin-info {
-color:#222;
-}
-#plugin-authors {
-}
-
-/* login */
-.login {
-/* position: absolute; */
-text-align: right;
-/*
-background: url('/assets/tweed.png');
-border-bottom: 4px solid #000;
-border-right: 4px solid #000;
-border-top: 4px solid #db363a;
-border-left: 4px solid #db363a;
-border: 4px solid #000;
-*/
-padding: 5px;
-margin-top: 5px;
-color: #fff;
-border-radius: 3px;
-}
-.login a {
-color: #db363a;
-font-weight: bold;
-}
-.login a:hover {
-text-shadow:   0px 0px 2px #fff;
-color: #000;
-}
-
-/* Polls */
-.poll-div {
-text-align: left;
-font-size: 1.2em;
-color: #222;
-}
-.poll-title {
-font-size: 30px;
-margin-bottom: 10px;
-}
-
-.poll-data-text {
-font-weight: bold;
-margin-top: 10px;
-margin-bottom: 4px;
-}
-
-.poll-data-submit input {
-font-size: 1.2em;
-color: #db363a;  
-padding: 2px 10px 2px 10px;
-}  
-
-.poll-data-submit input:hover {
-font-size: 1.2em;
-font-weight: bold;
-color: #222;  
-padding: 2px 10px 2px 6px;
-}  
-
-/* Books styles */
-.program-code {
-font-family: monospace;
-background: #eee;
-border: 1px solid #ccc;
-padding: 4px;
-}
-
-
-.blog-entry a {
-font-size: 1.4em;
-padding-bottom: 10px;
-}
-
-/* Needed because of foundation */
-.cmsedit-menu ul li ul {
-left: 0px;
-}
-
-.cmsedit-menu ul li ul li ul {
-left: 85%;
-}
-
-#last-news, #last-blogs {
-font-size: 0.8em;
-margin-top: 5px;
-margin-bottom: 5px;
-background-image: linear-gradient(180deg, #f8f8f8 10%, #eee 100%);
-padding: 6px;
+footer hr {
+margin: 5px 0;
 }
