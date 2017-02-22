@@ -1,17 +1,27 @@
 body {
 /*  background-color: #222;*/
+  font-family: Noto Sans, Helvetica;
 }
 .wrap {
   margin: 0 auto;
   max-width: 1200px;
   width: 90%;
+
 }
+
+p {margin-bottom: 0.1rem}
 
 /************* TOP BAR ************/
 .top-bar {
   color: #fff;
   background-color: #222;
 }
+
+.top-bar ul {
+  background-color: #222;
+
+}
+.top-bar-title { padding: 0px; padding-bottom: 20px;}
 .top-bar-title a {
   font-size: 3em;
   color: red;
@@ -27,17 +37,21 @@ body {
 }
 
 .top-bar-right .login {
-  padding-top: 10px;
+}
+.top-bar-right {
+  background-color: #222;
 }
 
-.top1 { padding-bottom: 0px;}
-.top2 { padding-top: 0px;}
+.top1 { padding-bottom: 0px; }
+.top2 { 
+  padding: 10px 25px 0px 0px; 
+  font-size: 1.1em;
+}
 
 /************* MAIN ************/
 .main {
-  padding: 40px 0px;
-  background-color: #888;
-  font-size: 16px;
+  padding: 20px 0px;
+  font-size: 1.2em;
 }
 
 .main .column {
@@ -47,26 +61,110 @@ margin: 20px 0px;
 .main hr {
   border: 1px solid #999;
 }
+/*
+.main a:link, .main a:active, .main a:visited {
+  color: #db363a;
+}
+.main a:hover {
+color: #1779ba;
+}
+*/
 
 .hero {
-  height: 200px;
-  background: url(/assets/tweed.png);
+/*  height: 200px;
+  background: url(/assets/tweed.png); */
+background-color: #fff;
+padding: 10px 0px;
 }
 
+.hero .columns {
+padding: 20px 0px;
+vertical-align: middle;
+}
+
+.hero p {
+font-size: 2em;
+padding: 0px 20px;
+text-align: center;
+}
+.hero img {
+padding: 30px;
+text-align: center;
+}
 /************* FOOTER ************/
 footer {
   padding:40px 0;
-  height: 200px;
+  min-height: 200px;
   background-color: #222;
   font-size: 12px;
   color: rgba(255,255,255,0.5);
 }
 
 footer h3 {
-  font-size: 1.4em;
-  color: rgba(255,255,255,0.9);
+  font-size: 1.3em;
+  color: rgba(255,255,255,0.7);
 }
 
 footer hr {
 margin: 5px 0;
+  color: rgba(255,255,255,0.7);
+}
+
+#poll {
+background-color: #000;
+padding: 1rem;
+color: #fff;
+font-size: 1.2em;
+}
+
+#poll .poll-title {
+font-size: 2em;
+margin-bottom: 10px;
+}
+
+#poll .poll-data-text {
+font-size: 1.4em;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+#poll .dc-submit {
+padding: 10px 15px;
+margin: 20px 0px;
+}
+
+#poll .dc-submit:hover {
+color: blue;
+}
+
+#poll .dc-link {
+padding: 0px;
+background-color: none;
+border: none;
+}
+#poll .dc-link-submit {
+padding: 0px;
+background: none;
+border: none;
+}
+#poll a:hover {
+padding: 0px;
+background: none;
+border: none;
+}
+
+.docs p, .news-body p {
+margin-bottom: 2px;
+font-size: 1.2em;
+}
+
+.program-code {
+background-color: #eee;
+border: 1px solid #e8e8e8;
+padding: 5px;
+font-family: monospace; 
+}
+
+.plugin-info {
+font-size: 1.2em;
 }

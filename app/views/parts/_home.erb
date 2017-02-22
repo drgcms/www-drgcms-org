@@ -1,17 +1,30 @@
 
-<div class="top-bar top2">
-  <div class="wrap">
-    <div class="login top-bar-right"><%= dc_render(:common, method: 'login') %></div>
-  </div>
-</div>
-
 <section class="hero">
-  <div class="wrap">
-    
+  <div class="wrap row">
+    <div class="small-12 medium-6 columns">
+      <p>Create complex data entry applications with minimum amount of source code<br><br>
+      <a href="/create-applications" class="button primary">Learn More</a>
+      </p>
+    </div>
+    <div class="small-12 medium-6 columns">
+      <%= image_tag('drg-1.png') %>
+    </div>
   </div>
-  
+<!-- -->
+  <div class="wrap row">
+    <div class="small-12 medium-6 columns" style="float: right;">
+      <p>Multiple sites on single RubyOnRails instance.<br><br>
+      <a href="about.html" class="button primary">Learn More</a>
+      </p>
+    </div>
+    <div class="small-12 medium-6 columns">
+      <%= image_tag('drg-2.png') %>
+    </div>
+  </div>
+
 </section>
-  
+
+<% if false %>
 <section class="main">
   <div class="wrap row">
     <div class="small-12 medium-6 column">
@@ -36,3 +49,4 @@
     </div>
   </div>
 </section>
+<% end %>

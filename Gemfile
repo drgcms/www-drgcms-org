@@ -22,8 +22,10 @@ gem 'mongo_session_store-rails4'#, github: 'maisaengineering/mongoid4-session-st
 gem 'jquery-rails'#, '= 4.0.5'
 gem 'jquery-ui-rails'
 
-gem 'kaminari'                 
-#gem 'therubyracer'
+#gem 'kaminari'                 
+gem 'kaminari-mongoid'
+gem 'kaminari-actionview'
+
 gem 'unicode_utils'
 gem 'foundation-rails' #, '~> 5'
 gem 'font-awesome-rails'

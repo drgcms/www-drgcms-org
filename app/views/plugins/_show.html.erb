@@ -1,3 +1,4 @@
+
 <div id="plugin">
   <%= session[:edit_mode] > 1 ? dc_link_for_edit({ 
       controller: :cmsedit, id: plugin, table: 'dc_plugin', formname: 'dc_plugin_edit',
@@ -14,3 +15,4 @@
     <%= link_to('Documentation', (plugin.doc_url.to_s.size > 5 ? plugin.doc_url : '') ) %>
   </span>
 </div>
+

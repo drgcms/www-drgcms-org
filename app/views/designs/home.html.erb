@@ -1,17 +1,23 @@
 
 <%= dc_page_top %>
+<div class="top-bar top2">
+  <div class="wrap">
+    <div class="login top-bar-right"><%= dc_render(:common, method: 'login') %></div>
+  </div>
+</div>
 
 <nav class="top-bar top1">
   <div class="wrap">
   <div class="top-bar-title">
     <a href="/">DRG<sup>CMS</sup></a>
   </div>
+    
   <div id="responsive-menu">
     <div class="top-bar-right">
       <ul class="menu">
         <li><a href="/books">Docs</a></li>
         <li><a href="/plugins">Plugins</a></li>
-        <li><a href="/docs">Demo</a></li>
+        <li><a href="/demo">Demo</a></li>
 <!--
           <ul class="menu vertical">
             <li><a href="#">One</a></li>
@@ -27,24 +33,27 @@
   </div>
 </nav>
 
-<%= dc_render_design_part(@main)   %>
+<div class="wrap main">
+  <%= dc_render_design_part(@main) %>
+</div>
 
 <footer>  
   <div class="wrap row">
     <div class="column small-12 medium-4">
       <h3>Links:</h3>
       <hr>
-      <a href="https://groups.google.com/forum/#!forum/drg-cms">Discussion forum</a>
+      <a href="https://groups.google.com/forum/#!forum/drg-cms">DRG CMS discussion forum</a><br><br>
+      <a href="https://github.com/drgcms">DRG CMS project on GitHub</a>
     </div>
     <div class="column small-12 medium-4">
-      <h3>Links:</h3>
+      <h3>Last news:</h3>
       <hr>
-      <a href="https://groups.google.com/forum/#!forum/drg-cms">Discussion forum</a>
+      <%= dc_render(:dc_news, method: 'last_news') %>
     </div>
     <div class="column small-12 medium-4">
-      <h3>Links:</h3>
+      <h3>Last blogs:</h3>
       <hr>
-      <a href="https://groups.google.com/forum/#!forum/drg-cms">Discussion forum</a>
+      <%= dc_render(:dc_blog, method: 'last_blogs') %>
     </div>
   </div>
     
