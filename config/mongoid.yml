@@ -21,7 +21,8 @@ test:
 
 production:
   clients:
-    default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      database: drgcms
+      hosts:
+        - localhost:27017
   options:
     raise_not_found_error: false
