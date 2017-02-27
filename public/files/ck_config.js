@@ -7,7 +7,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
         //config.language = 'en';
 	// config.uiColor = '#AADC6E';
-  config.filebrowserBrowseUrl       = '/assets/drg_default_html_editor/elfinder/elfinder.html';
+  config.filebrowserBrowseUrl       = '/assets/elfinder/elfinder.html';
 //  config.filebrowserUploadUrl       = '/elfinder/datoteke';
 //  config.filebrowserImageBrowseUrl  = '/elfinder/datoteke';
 //  config.filebrowserImageUploadUrl  = '/elfinder/datoteke';

@@ -21,6 +21,7 @@ test:
 
 production:
   clients:
+    default:
       database: drgcms
       hosts:
         - localhost:27017
