@@ -18,4 +18,5 @@
 /vendor/ruby
 
 /nbproject
-#/public/files
+/public/files
+/Gemfile.lock
