@@ -1,11 +1,6 @@
 WwwDrgcms::Application.routes.draw do
   root :to => "dc_main#page"
-
-  match '/dc_common/:action' => 'dc_common#:action', via: [:get, :put, :post]
-#  match 'elfinder' => 'home#elfinder', via: [:get, :post]
   get 'home' => 'dc_main#page'
-  #match '/book/:id' => 'main#page:id'
-  #get '/book/*path/:id', to: 'main#page'
   
   get '/blog/:name/:link' => 'dc_main#page', :defaults => { path: 'blog' }
   get '/blog/:name' => 'dc_main#page', :defaults => { path: 'blog', link: 'all' }
@@ -22,10 +17,7 @@ WwwDrgcms::Application.routes.draw do
   get '/plugins/search' => 'plugins#search'
   get '/dc_test' => 'dc_test#index' 
 
-#  match 'cmsedit/login' => 'cmsedit#login', via: [:get]  
-  resources :cmsedit
-  match 'elfinder' => 'dc_elfinder#connector', via: [:get, :post]
-  #match 'poll' => 'dc_main#page', via: [:get, :post]
+  DrgCms.routes
   
   get '*path' => 'dc_main#page'  
   
