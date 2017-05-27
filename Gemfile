@@ -41,12 +41,10 @@ if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'drg_blog_news_forum', :path => '../drg_blog_news_forum'
   gem 'drg_scorm', :path => '../drg_scorm'
 else
-  source "http://192.168.2.79" do
 #  gem 'puma'
     gem 'drg_cms'
     gem 'drg_default_html_editor'
     gem 'drg_books'
     gem 'drg_blog_news_forum'
     gem 'rails_12factor' #, group: :production
-  end
 end
