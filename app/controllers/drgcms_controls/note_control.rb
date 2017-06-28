@@ -1,5 +1,6 @@
+#encoding: utf-8
 #--
-# Copyright (c) 2016+ Damjan Rems
+# Copyright (c) 2017+ Damjan Rems
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -21,19 +22,16 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
 
-menu:
-  80_test:
-    caption: Test 
-    icon: bookmark-o
-    items:
-      100: 
-        caption: Test
-        controller: cmsedit
-        icon: table
-        table: dc_test
-      110: 
-        caption: helpers.label.note.tabletitle
-        controller: cmsedit
-        icon: book
-        table: note
-                
+######################################################################
+# DrgcmsControls for Prirocnik model. Ta kontrola je specialno za konvertiranje čšž v linkih.
+######################################################################
+module DrgcmsControls::NoteControl
+
+######################################################################
+# Postavi link v dc_parts na downcase in izmeči čšž.
+######################################################################
+def dc_before_new()
+  @record.user_id = session[:user_id]
+end
+
+end 
