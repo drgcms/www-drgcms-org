@@ -8,32 +8,19 @@
 
 <nav class="top-bar top1">
   <div class="wrap">
-  <div class="top-bar-title">
-    <a href="/">DRG<sup>CMS</sup></a>
-  </div>
-    
-  <div id="responsive-menu">
+    <div class="top-bar-title">
+      <a href="/">DRG<sup>CMS</sup></a>
+    </div>
+
     <div class="top-bar-right">
       <ul class="menu">
-        <li><a href="/books">Docs</a></li>
-        <li><a href="/plugins">Plugins</a></li>
-        <li><a href="/demo">Demo</a></li>
-<!--
-          <ul class="menu vertical">
-            <li><a href="#">One</a></li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
-          </ul>
--->
-</li>
-        <li><a href="/news">News</a></li>
-        <li><a href="/blog">Blog</a></li>
+      <%= dc_render(:dc_simple_menu, method: :as_responsive, name: 'drgcms-menu') %>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="wrap main">
+<div class="main wrap">
   <%= dc_render_design_part(@main) %>
 </div>
 
