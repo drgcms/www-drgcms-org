@@ -1,7 +1,7 @@
 PATH
   remote: ../drg_blog_news_forum
   specs:
-    drg_blog_news_forum (0.5.6)
+    drg_blog_news_forum (0.5.51.0)
       drg_cms
       rails
 
@@ -14,7 +14,7 @@ PATH
 PATH
   remote: ../drg_cms
   specs:
-    drg_cms (0.5.50.2)
+    drg_cms (0.5.50.4)
       bcrypt
       font-awesome-rails
       jquery-rails
@@ -244,7 +244,7 @@ DEPENDENCIES
   listen
   minitest
   mongo_session_store-rails5
-  mongoid
+  mongoid (= 6.1.0)
   non-stupid-digest-assets
   rails
   sass-rails
