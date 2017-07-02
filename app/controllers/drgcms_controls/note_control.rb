@@ -23,12 +23,12 @@
 #++
 
 ######################################################################
-# DrgcmsControls for Prirocnik model. Ta kontrola je specialno za konvertiranje čšž v linkih.
+# DrgcmsControls for Notes application
 ######################################################################
 module DrgcmsControls::NoteControl
 
 ######################################################################
-# Postavi link v dc_parts na downcase in izmeči čšž.
+# Fill in currently logged user.
 ######################################################################
 def dc_before_new()
   @record.user_id = session[:user_id]

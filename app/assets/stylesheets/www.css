@@ -4,9 +4,8 @@ body {
 }
 .wrap {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1050px;
   width: 90%;
-
 }
 
 p {margin-bottom: 0.1rem}
@@ -17,13 +16,15 @@ p {margin-bottom: 0.1rem}
   background-color: #222;
 }
 
+.top-bar a {font-weight: bold;} 
+
 .top-bar ul {
   background-color: #222;
 
 }
 .top-bar-title { padding: 0px; padding-bottom: 20px;}
 .top-bar-title a {
-  font-size: 3em;
+  font-size: 4em;
   color: #db363a;
 }
 .top-bar-title sup {
@@ -36,13 +37,13 @@ p {margin-bottom: 0.1rem}
   padding:1em;
 }
 
-.top-bar-right .login {
-}
+.login {max-width: 930px; }
+
 .top-bar-right {
   background-color: #222;
 }
 
-.top1 { padding-bottom: 0px; }
+.top1 { padding-bottom: 20px; }
 .top2 { 
   padding: 10px 25px 0px 0px; 
   font-size: 1.1em;
@@ -61,6 +62,8 @@ margin: 20px 0px;
 .main hr {
   border: 1px solid #999;
 }
+.main a {color: #db363a}
+.main a:hover {color: #cb161a}
 /*
 .main a:link, .main a:active, .main a:visited {
   color: #db363a;
@@ -71,25 +74,23 @@ color: #1779ba;
 */
 
 .hero {
-/*  height: 200px;
-  background: url(/assets/tweed.png); */
 background-color: #fff;
-padding: 10px 0px;
+
 }
 
 .hero .columns {
-padding: 20px 0px;
+padding: 60px 0px;
 vertical-align: middle;
+text-align: center;
 }
 
 .hero p {
 font-size: 2em;
 padding: 0px 20px;
-text-align: center;
 }
+
 .hero img {
-padding: 30px;
-text-align: center;
+/*padding: 30px;*/
 }
 /************* FOOTER ************/
 footer {
