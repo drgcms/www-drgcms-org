@@ -1,0 +1,21 @@
+table: dc_memory
+
+form:
+  tabs:
+    tab1:
+      10:
+        name: text_1
+        type: text_field
+        size: 20
+      20:
+        name: text_2
+        type: text_field
+        size: 20
+        html:
+          required: 1
+    tab2:
+      10:
+        name: body
+        type: html_field
+        options: "height: 500"
+        

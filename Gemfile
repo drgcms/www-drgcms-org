@@ -10,12 +10,12 @@ source 'https://rubygems.org'
 
 gem 'rails' #, '~> 4'
 gem 'activeresource'
-gem 'bcrypt' # , '~> 3.0.0'
+#gem 'bcrypt' # , '~> 3.0.0'
 
 gem 'sass-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-gem 'uglifier'      #, '>= 1.0.3'
-gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
+#gem 'uglifier'      #, '>= 1.0.3'
+#gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
 
 gem 'mongoid', '= 6.1.0' # github: 'mongoid/mongoid'
 gem 'mongo_session_store-rails5'#, github: 'maisaengineering/mongoid4-session-store'
