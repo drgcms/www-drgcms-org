@@ -14,7 +14,7 @@ gem 'activeresource'
 
 gem 'sass-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-#gem 'uglifier'      #, '>= 1.0.3'
+gem 'uglifier'      #, '>= 1.0.3'
 #gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
 
 gem 'mongoid', '= 6.1.0' # github: 'mongoid/mongoid'

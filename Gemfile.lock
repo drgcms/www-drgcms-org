@@ -217,6 +217,8 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
+    uglifier (3.2.0)
+      execjs (>= 0.3.0, < 3)
     unicode_utils (1.4.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
@@ -246,6 +248,7 @@ DEPENDENCIES
   sass-rails
   sprockets-rails
   thin
+  uglifier
   unicode_utils
 
 BUNDLED WITH
