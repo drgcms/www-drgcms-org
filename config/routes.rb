@@ -17,6 +17,9 @@ WwwDrgcms::Application.routes.draw do
   get '/plugins/search' => 'plugins#search'
   get '/dc_test' => 'dc_test#index' 
 
+  post '/demo_form/show_result' => 'demo_form#show_result' 
+  post '/demo_form/show_pdf' => 'demo_form#show_pdf' 
+
   DrgCms.routes
   
   get '*path' => 'dc_main#page'  
