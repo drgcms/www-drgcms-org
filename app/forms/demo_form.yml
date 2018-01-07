@@ -5,7 +5,10 @@ controls: demo_form
 
 form:
   actions:
-    1: save
+    1: 
+      type: submit
+      caption: Process
+      
     10:
       type: ajax
       method: post
@@ -268,12 +271,13 @@ The example shows how menu is selected when editing dc_page document.<br><listin
 &nbsp;&nbsp;type: tree_select<br>
 &nbsp;&nbsp;eval: "@parent.dc_menu_class.choices4_menu_as_tree(@record.dc_site_id)"<br>
 &nbsp;&nbsp;style: "max-height: 300px"<br>
-&nbsp;&nbsp;single: true</listing>'
+&nbsp;&nbsp;multiple: true</listing>'
       40:
         name: menu_id
         type: tree_select
         eval: "@parent.dc_menu_class.choices4_menu_as_tree(@record.dc_site_id)"
         style: "max-height: 300px"
+        multiple: true
 
 ####
     4-DateTime:

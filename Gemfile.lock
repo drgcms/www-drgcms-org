@@ -14,7 +14,7 @@ PATH
 PATH
   remote: ../drg_cms
   specs:
-    drg_cms (0.5.52)
+    drg_cms (0.5.52.1)
       bcrypt
       font-awesome-rails
       jquery-rails
@@ -244,6 +244,7 @@ DEPENDENCIES
   minitest
   mongo_session_store-rails5
   mongoid (= 6.1.0)
+  non-stupid-digest-assets
   rails
   sass-rails
   sprockets-rails

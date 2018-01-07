@@ -34,17 +34,21 @@ def dc_new_record()
   @record.field3   = 'ReadOnly field 1'
   @record[:field4] = 'ReadOnly field 2'
   @record.field44  = Time.now.localtime.end_of_month
-  
 end
 
 ######################################################################
-# Process form
+# Process submit 
 ######################################################################
-def dc_new_record()
-  @record.field3   = 'ReadOnly field 1'
-  @record[:field4] = 'ReadOnly field 2'
-  @record.field44  = Time.now.localtime.end_of_month
-  
+def dc_before_save()
+# save data, but return false because data would be normally saved to DB by 
+# controller, which would result in error
+  html = ''
+  html = params['record'].each do |field|
+    html << "#{field}=#{params['record'][field]}\n"
+  end
+  @record[:result] = html
+  flash[:info] = 'Data processed succesfully.'
+  return false
 end
 
 end 

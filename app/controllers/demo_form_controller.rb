@@ -1,7 +1,11 @@
 class DemoFormController < DcApplicationController
 
 ####################################################################
-#
+# Processing ajax call from DRG Form. 
+# - collect data from input fields
+# - update div_td_record_result with new value
+# - set info and error message
+# - open pdf document in new window
 ####################################################################
 def show_result
   html = ''
