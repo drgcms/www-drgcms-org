@@ -17,7 +17,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'uglifier'      #, '>= 1.0.3'
 gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
 
-gem 'mongoid', '= 6.1.0' # github: 'mongoid/mongoid'
+gem 'mongoid'#, '= 6.1.0' # github: 'mongoid/mongoid'
 gem 'mongo_session_store-rails5'#, github: 'maisaengineering/mongoid4-session-store'
 gem 'jquery-rails' #, '= 4.0.5'
 gem 'jquery-ui-rails'
@@ -31,8 +31,10 @@ gem 'font-awesome-rails'
 gem 'listen'
 
 if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
-  gem 'thin'
+  gem 'puma'
   gem 'minitest'
+  gem 'capybara'
+  gem 'selenium-webdriver'
   
   gem 'drg_cms', :path => '../drg_cms'
   gem 'drg_default_html_editor', :path => '../drg_default_html_editor'
@@ -45,4 +47,9 @@ else
   gem 'drg_books'
   gem 'drg_blog_news_forum'
   gem 'rails_12factor' #, group: :production
+end
+
+if ENV["RAILS_ENV"] == "test"
+  gem 'minitest'
+  gem 'capybara'
 end
