@@ -4,7 +4,7 @@ development:
 #      uri: <%= ENV['MONGOHQ_URL'] %>      
       database: rails_project_development
       hosts:
-        - localhost:27017
+        - 127.0.0.1:27017
       options:
   options:
     raise_not_found_error: false # by rems
@@ -12,9 +12,9 @@ development:
 test:
   clients:
     default:
-      database: testi
+      database: testing
       hosts:
-        - localhost:27017
+        - 127.0.0.1:27017
       options:
   options:
     raise_not_found_error: false # by rems
@@ -24,6 +24,6 @@ production:
     default:
       database: drgcms
       hosts:
-        - localhost:27017
+        - 127.0.0.1:27017
   options:
     raise_not_found_error: false
