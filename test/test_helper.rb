@@ -1,7 +1,9 @@
-#ENV["RAILS_ENV"] = "test"
-Rails.env = "test"
+
+ENV["RAILS_ENV"] = 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+
+require DrgCms.from_root('test/fixtures/drg_cms_test_data.rb')
 Mongo::Logger.logger.level = ::Logger::FATAL
 
 class ActiveSupport::TestCase
@@ -14,12 +16,6 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   #include Mongoid::FixtureSet::TestHelper
   #self.fixture_path = "#{Rails.root}/test/fixtures"
-  require 'fixtures/test_data.rb'
+  drg_cms_test_data_load
 end
 
-def db_clear
-  DcUser.all.delete
-  DcSite.all.delete
-  DcPermission.all.delete
-  DcPolicyRole.all.delete
-end
