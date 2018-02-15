@@ -196,7 +196,7 @@ except collection name, description field and key name and provide values for ch
       55:
         type: comment
         top-line: 1
-        comment: 'Choices provided from code defined in any .<br><listing>
+        comment: 'Choices provided from code defined in any Class.method.<br><listing>
 60:<br>
 &nbsp;&nbsp;name: field25<br>
 &nbsp;&nbsp;type: select<br>
