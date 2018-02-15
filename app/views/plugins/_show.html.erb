@@ -1,5 +1,5 @@
 
-<div id="plugin">
+<div id="plugin" class="wrap">
   <%= session[:edit_mode] > 1 ? dc_link_for_edit({ 
       controller: :cmsedit, id: plugin, table: 'dc_plugin', formname: 'dc_plugin_edit',
       title: t('dc_plugin.edit_plugin', 'Edit plugin!'), target: 'iframe_edit' })+'<br/>'.html_safe : '' %>
