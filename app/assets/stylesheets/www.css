@@ -169,3 +169,8 @@ font-family: monospace;
 .plugin-info {
 font-size: 1.2em;
 }
+
+.pagination {
+  display: inline-flex;
+  padding-left: 1em; float: left;
+}
