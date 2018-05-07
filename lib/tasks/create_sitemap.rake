@@ -31,7 +31,7 @@ end
 #
 #######################################################################
 def drgcms_org_menu
-  DcSimpleMenu.find_by(:dc_site_id => @site._id).dc_simple_menu_items.each do |menu|
+  DcSimpleMenu.find(@site.menu_id).dc_simple_menu_items.each do |menu|
     url = @xml.root.add_element 'url'
     url.add_element('loc').add_text( clear_url(@site_name, menu.link))
     url.add_element('lastmod').add_text(Time.now.strftime('%Y-%m-%d'))
@@ -43,7 +43,7 @@ end
 #
 #######################################################################
 def drgcms_news
-  DcNews.where(:active => true).each do |news|
+  DcNews.where(active: true).each do |news|
     url = @xml.root.add_element 'url'
     url.add_element('loc').add_text( clear_url(@site_name, "/news/#{news.link}"))
     url.add_element('lastmod').add_text(news.updated_at.strftime('%Y-%m-%d'))
@@ -55,7 +55,7 @@ end
 #
 #######################################################################
 def drgcms_blog
-  DcBlog.where(:active => true).each do |blog|
+  DcBlog.where(active: true).each do |blog|
     url = @xml.root.add_element 'url'
     url.add_element('loc').add_text( clear_url(@site_name, "/blog/#{blog.created_by_name}/#{blog.link}"))
     url.add_element('lastmod').add_text(blog.updated_at.strftime('%Y-%m-%d'))
@@ -66,18 +66,22 @@ end
 #######################################################################
 #
 #######################################################################
-def drgcms_books
-  DcBook.where(:active => true).each do |book|
-    url = @xml.root.add_element 'url'
-    url.add_element('loc').add_text( clear_url(@site_name, "/books/toc/#{book.link}"))
-    url.add_element('lastmod').add_text(book.updated_at.strftime('%Y-%m-%d'))
-    url.add_element('changefreq').add_text('monthly')
-    DcBookChapter.where(dc_book_id: book._id, active: true).each do |chapter|
-      url = @xml.root.add_element 'url'
-      url.add_element('loc').add_text( clear_url(@site_name, "/books/chapter/#{book.link}/#{chapter.link}"))
-      url.add_element('lastmod').add_text(chapter.updated_at.strftime('%Y-%m-%d'))
-      url.add_element('changefreq').add_text('weekly')
-    end
+def do_manual_pages(page, links)
+  url = @xml.root.add_element 'url'
+  url.add_element('loc').add_text( clear_url(@site_name, "/#{links.join('/')}/#{page.link}"))
+  url.add_element('lastmod').add_text(page.updated_at.strftime('%Y-%m-%d'))
+  url.add_element('changefreq').add_text('monthly')
+  page.dc_manual_pages.where(active: true).each do |pag| 
+    do_manual_pages(pag, links + [page.link])
+  end
+end
+
+#######################################################################
+#
+#######################################################################
+def drgcms_manual
+  DcManual.where(active: true).each do |manual|
+    do_manual_pages(manual,['docs'])
   end
 end
 
@@ -86,14 +90,16 @@ namespace :sitemap do
   desc 'Create sitemap.xml file for search engines.'
   task :create, [:name] => :environment do |t, args|
     @site_name = 'https://www.drgcms.org'
-    @site = DcSite.find_by(name: 'www.mysite.com') #  www.drgcms.org
+    @site = DcSite.find_by(name: 'www.drgcms.org') #  www.drgcms.org
+#    DcSite.all.each {|s| p s.name}
     
     require 'rexml/document'    
     @xml    = REXML::Document.new('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>')
     drgcms_org_menu
     drgcms_news
     drgcms_blog
-    drgcms_books
+#    drgcms_books
+    drgcms_manual
 #    
     formatter = REXML::Formatters::Pretty.new(2)
     formatter.compact = true

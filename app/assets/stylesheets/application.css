@@ -11,7 +11,7 @@
  *= require drg_cms_application
  *= require drg_default_html_editor_application 
  *= require drg_blog_news_forum
- *= require drg_books
+ *= require drg_manual
  *= require foundation_and_overrides  
  *= require www
  */
