@@ -14,7 +14,7 @@ PATH
 PATH
   remote: ../drg_cms
   specs:
-    drg_cms (0.5.52.8)
+    drg_cms (0.5.52.9)
       bcrypt
       font-awesome-rails
       jquery-rails
