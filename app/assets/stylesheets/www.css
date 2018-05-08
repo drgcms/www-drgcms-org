@@ -13,18 +13,23 @@ p {margin-bottom: 0.1rem}
 /************* TOP BAR ************/
 .top-bar {
   color: #fff;
-  background-color: #222;
+  background-color: #333;
+  padding: 0;
 }
 
 .top-bar a {font-weight: bold;} 
 
 .top-bar ul {
-  background-color: #222;
+  background-color: #333;
 
 }
-.top-bar-title { padding: 0px; padding-bottom: 20px;}
+.top-bar-title { 
+  padding: 0; 
+  margin: 0;
+  float:left;
+}
 .top-bar-title a {
-  font-size: 4em;
+  font-size: 3.5em;
   color: #db363a;
 }
 .top-bar-title sup {
@@ -35,18 +40,18 @@ p {margin-bottom: 0.1rem}
 .menu a {
   font-size: 1.5em;
   padding:1em;
+  color: #999;
 }
+
+footer a {color: #999;}
+.menu a:hover, footer a:hover {color: #666;}
 
 .login {max-width: 930px; }
 
 .top-bar-right {
-  background-color: #222;
-}
-
-.top1 { padding-bottom: 20px; }
-.top2 { 
-  padding: 10px 25px 0px 0px; 
-  font-size: 1.1em;
+  background-color: #333;
+  float: right;
+  padding-top: 0.5em;
 }
 
 /************* MAIN ************/
@@ -64,14 +69,6 @@ margin: 20px 0px;
 }
 .main a {color: #db363a}
 .main a:hover {color: #cb161a}
-/*
-.main a:link, .main a:active, .main a:visited {
-  color: #db363a;
-}
-.main a:hover {
-color: #1779ba;
-}
-*/
 
 .hero {
 background-color: #fff;
@@ -173,4 +170,35 @@ font-size: 1.2em;
 .pagination {
   display: inline-flex;
   padding-left: 1em; float: left;
+}
+
+/* LOGIN-LOGOUT */
+.menu-login .login {
+  color: #db363a;
+}
+
+.menu-login .logout {
+  color: #fff;
+  font-weight: normal;
+}
+/* throw out after next version */
+.manual .column:first-child {
+  background: linear-gradient(to bottom, #fcfcfc 0%, #eee 100%); 
+  padding: 1em;
+  border-radius: 2px;
+}
+
+#manual-menu.menu {
+  display: block;
+}
+
+#manual-menu.menu .submenu-toggle::after {
+  border-color: #444 transparent;
+}
+
+#manual-menu .submenu-toggle {
+  width: 6px;
+  height: 6px;
+  top: 6px;
+  right: 8px;
 }

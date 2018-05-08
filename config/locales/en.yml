@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  login: LOGIN
+  logout: LOGOUT

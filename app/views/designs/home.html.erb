@@ -1,12 +1,14 @@
 
 <%= dc_page_top %>
+<!--
 <div class="top-bar top2">
   <div class="wrap">
     <div class="login top-bar-right"><%= dc_render(:common, method: 'login') %></div>
   </div>
 </div>
+-->
 
-<nav class="top-bar top1">
+<nav class="top-bar">
   <div class="wrap">
     <div class="top-bar-title">
       <a href="/">DRG<sup>CMS</sup></a>
@@ -19,8 +21,9 @@
     </div>
   </div>
 </nav>
+<div style="clear: both;"></div>
 
-<div class="main">
+<div class="main" style="padding-top: 4rem;">
   <%= dc_render_design_part(@main) %>
 </div>
 
