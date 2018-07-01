@@ -26,27 +26,32 @@ gem 'kaminari-actionview'
 gem 'unicode_utils'
 gem 'foundation-rails' #, '~> 5'
 gem 'font-awesome-rails'
-gem 'listen'
+
+gem 'bootsnap', '>= 1.1.0', require: false
 
 if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'puma'
+  gem 'listen'
+  
   gem 'minitest'
   gem 'capybara'
   gem 'selenium-webdriver'
   
   gem 'drg_cms', :path => '../drg_cms'
   gem 'drg_default_html_editor', :path => '../drg_default_html_editor'
-  gem 'drg_books', :path => '../drg_books'
   gem 'drg_manual', :path => '../drg_manual'
   gem 'drg_blog_news_forum', :path => '../drg_blog_news_forum'
-  gem 'drg_scorm', :path => '../drg_scorm'
 else
   gem 'drg_cms'
   gem 'drg_default_html_editor'
-  gem 'drg_books'
   gem 'drg_manual'
   gem 'drg_blog_news_forum'
   gem 'rails_12factor' #, group: :production
+end
+
+if ENV["RAILS_ENV"] == "development"
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 if ENV["RAILS_ENV"] == "test"

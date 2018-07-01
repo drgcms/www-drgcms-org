@@ -6,15 +6,9 @@ PATH
       rails
 
 PATH
-  remote: ../drg_books
-  specs:
-    drg_books (0.5.3.2)
-      drg_cms
-
-PATH
   remote: ../drg_cms
   specs:
-    drg_cms (0.5.52.9)
+    drg_cms (0.5.52.11)
       bcrypt
       font-awesome-rails
       jquery-rails
@@ -37,16 +31,8 @@ PATH
 PATH
   remote: ../drg_manual
   specs:
-    drg_manual (0.0.1)
+    drg_manual (0.0.2)
       drg_cms
-
-PATH
-  remote: ../drg_scorm
-  specs:
-    drg_scorm (0.0.1)
-      drg_cms
-      mongoid
-      rails
 
 GEM
   remote: https://rubygems.org/
@@ -103,10 +89,12 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    bcrypt (3.1.11)
+    bcrypt (3.1.12)
+    bootsnap (1.3.0)
+      msgpack (~> 1.0)
     bson (4.3.0)
     builder (3.2.3)
-    capybara (3.0.3)
+    capybara (3.1.1)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -167,6 +155,7 @@ GEM
     mongoid (7.0.1)
       activemodel (>= 5.1, < 6.0.0)
       mongo (>= 2.5.1, < 3.0.0)
+    msgpack (1.2.4)
     nio4r (2.3.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
@@ -218,6 +207,11 @@ GEM
       rubyzip (~> 1.2)
     sort_alphabetical (1.1.0)
       unicode_utils (>= 1.2.2)
+    spring (2.0.2)
+      activesupport (>= 4.2)
+    spring-watcher-listen (2.0.1)
+      listen (>= 2.7, < 4.0)
+      spring (>= 1.2, < 3.0)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -248,13 +242,12 @@ PLATFORMS
 
 DEPENDENCIES
   activeresource
+  bootsnap (>= 1.1.0)
   capybara
   drg_blog_news_forum!
-  drg_books!
   drg_cms!
   drg_default_html_editor!
   drg_manual!
-  drg_scorm!
   font-awesome-rails
   foundation-rails
   jquery-rails
@@ -270,9 +263,11 @@ DEPENDENCIES
   rails (~> 5.1.0)
   sass-rails
   selenium-webdriver
+  spring
+  spring-watcher-listen (~> 2.0.0)
   sprockets-rails
   uglifier
   unicode_utils
 
 BUNDLED WITH
-   1.16.0
+   1.16.2
