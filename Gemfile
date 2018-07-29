@@ -6,9 +6,8 @@ ENV["RAILS_ENV"] ||= "development"
 source 'https://rubygems.org'
 #source 'http://gems.ozs.si' if ENV["RAILS_ENV"] == "production"
 
-gem 'rails' , '~> 5.1.0'
-gem 'activeresource'
-#gem 'bcrypt' # , '~> 3.0.0'
+gem 'rails' , '~> 5.2.0'
+#gem 'activeresource'
 
 gem 'sass-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
@@ -26,6 +25,7 @@ gem 'kaminari-actionview'
 gem 'unicode_utils'
 gem 'foundation-rails' #, '~> 5'
 gem 'font-awesome-rails'
+gem 'spreadsheet'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 

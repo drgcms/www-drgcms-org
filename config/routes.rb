@@ -1,6 +1,6 @@
 WwwDrgcms::Application.routes.draw do
-  root :to => "dc_main#page"
-  get 'home' => 'dc_main#page'
+  root :to => "portal#page"
+#  get 'home' => 'portal#page'
   
 #  get '/blog/:name/:link' => 'dc_main#page', :defaults => { path: 'blog' }
 #  get '/blog/:name' => 'dc_main#page', :defaults => { path: 'blog', link: 'all' }
@@ -12,8 +12,12 @@ WwwDrgcms::Application.routes.draw do
 
   post '/demo_form/show_result' => 'demo_form#show_result' 
   post '/demo_form/show_pdf' => 'demo_form#show_pdf' 
+  
+  put '/portal/process_login'
+  post '/reports/diary' 
 
   DrgCms.routes
   
-  get '*path' => 'dc_main#page'  
+#  get '*path' => 'dc_main#page'  
+  get '*path' => 'portal#page'  
 end
