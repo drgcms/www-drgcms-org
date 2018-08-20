@@ -70,6 +70,10 @@ vertical-align: middle;
 }
 
 /*********************** Portal menu *************************/
+#portal-menu ul {
+margin-bottom: 0;
+}
+/*
 #portal-menu {
   margin: 8px 0 8px;
   text-align: left;
@@ -103,7 +107,7 @@ vertical-align: middle;
 #portal-menu li.menu-selected a { 
   color: #fff !important;   
 }
-
+*/
 /********************** LOGIN ***********************************/
 #login {
   margin: 5rem auto;
