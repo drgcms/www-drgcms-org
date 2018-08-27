@@ -1,7 +1,7 @@
 PATH
   remote: ../drg_blog_news_forum
   specs:
-    drg_blog_news_forum (0.5.51.1)
+    drg_blog_news_forum (0.5.52.0)
       drg_cms
       rails
 
@@ -208,7 +208,7 @@ GEM
       rubyzip (~> 1.2)
     sort_alphabetical (1.1.0)
       unicode_utils (>= 1.2.2)
-    spreadsheet (1.1.7)
+    spreadsheet (1.1.8)
       ruby-ole (>= 1.0)
     spring (2.0.2)
       activesupport (>= 4.2)
