@@ -39,7 +39,7 @@ def login
   else
 %Q[
   <div class="portal-login">
-  #{@parent.link_to('LOGOUT : ', { controller: 'dc_common', action: 'logout', return_to: @parent.request.url} )}
+  #{@parent.link_to('LOGOUT : ', { controller: 'dc_common', action: 'logout', return_to: '/'} )}
   #{@parent.session[:user_name]}&nbsp;
   </div>
 ]
