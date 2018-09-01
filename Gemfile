@@ -41,10 +41,12 @@ if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'drg_default_html_editor', :path => '../drg_default_html_editor'
   gem 'drg_manual', :path => '../drg_manual'
   gem 'drg_blog_news_forum', :path => '../drg_blog_news_forum'
+  gem 'drg_rotator', :path => '../drg_rotator'
 else
   gem 'drg_cms'
   gem 'drg_default_html_editor'
   gem 'drg_manual'
+  gem 'drg_rotator'
   gem 'drg_blog_news_forum'
   gem 'rails_12factor' #, group: :production
 end

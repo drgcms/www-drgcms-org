@@ -1,5 +1,5 @@
 
-<section class="hero" style="padding-top: 4rem;">
+<section class="hero" style="padding-top: 2rem;">
 <!-- -->
 
   <div style="background-color: #ccc;">
@@ -28,27 +28,22 @@
   <div style="background-color: #ccc;">
     <div class="wrap row">
       <div class="small-12 columns">
-        <font style="font-size: 6em; color: #fff;">Ideal for building Intranet portals.</font>
+        <font style="font-size: 5em; color: #fff;">Ideal for building Intranet portals.</font>
       </div>
     </div>
   </div>
   
 <!-- -->
 
-  
-  <div class="wrap row">
-    <div class="small-12 medium-4 columns">
-      <%= image_tag('pic-www-drgcms.jpg') %>
-    </div>
-
-    <div class="small-12 medium-4 columns">
-      <p>Multiple sites on single RubyOnRails instance.<br><br>
-      <a href="/multiple-sites" class="button primary">Learn More</a>
-      </p>
-    </div>
-
-    <div class="small-12 medium-4 columns">
-      <%= image_tag('pic-tulips-drgcms.jpg') %>
+  <div style="">
+    <div class="wrap row">
+      <div class="small-12 medium-7 columns">
+        <%= dc_render(:dc_rotator, name: 'rotator1') %>
+      </div>
+      <div class="small-12 medium-5 columns">
+        <font style="font-size: 3em; color: #444;">Multiple sites on single RubyOnRails instance.</font>
+        <br><br><a href="/multiple-sites" class="button primary">Learn More</a>
+      </div>
     </div>
   </div>
 
@@ -57,24 +52,9 @@
   <div style="background-color: #ccc;">
     <div class="wrap row">
       <div class="small-12 columns">
-        <font style="font-size: 6em; color: #fff;">Works with Rails 5</font>
+        <font style="font-size: 5em; color: #fff;">Works with Rails 5.2</font>
       </div>
     </div>
   </div>
-  
-<!-- -->
-
 </section>
 
-<% if false %>
-  <div class="wrap row">
-    <div class="small-12 medium-6 columns" style="float: right;">
-      <p>Multiple sites on single RubyOnRails instance.<br><br>
-      <a href="/" class="button primary">Learn More</a>
-      </p>
-    </div>
-    <div class="small-12 medium-6 columns">
-      <%= image_tag('drg-2.png') %>
-    </div>
-  </div>
-<% end %>

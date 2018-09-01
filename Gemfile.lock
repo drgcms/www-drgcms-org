@@ -1,7 +1,7 @@
 PATH
   remote: ../drg_blog_news_forum
   specs:
-    drg_blog_news_forum (0.5.52.0)
+    drg_blog_news_forum (0.5.52.1)
       drg_cms
       rails
 
@@ -32,6 +32,12 @@ PATH
   remote: ../drg_manual
   specs:
     drg_manual (0.0.2)
+      drg_cms
+
+PATH
+  remote: ../drg_rotator
+  specs:
+    drg_rotator (0.1.0)
       drg_cms
 
 GEM
@@ -250,6 +256,7 @@ DEPENDENCIES
   drg_cms!
   drg_default_html_editor!
   drg_manual!
+  drg_rotator!
   font-awesome-rails
   foundation-rails
   jquery-rails

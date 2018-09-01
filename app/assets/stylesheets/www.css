@@ -76,7 +76,7 @@ background-color: #fff;
 }
 
 .hero .columns {
-padding: 60px 0px;
+padding: 4rem 0.2rem;
 vertical-align: middle;
 text-align: center;
 }
@@ -201,4 +201,11 @@ font-size: 1.2em;
   height: 6px;
   top: 6px;
   right: 8px;
+}
+
+/*******    MOBILE    ********/
+@media only screen and (max-width: 600px) {
+  .hero .columns {
+    padding: 1rem 0.2rem;
+  }  
 }
