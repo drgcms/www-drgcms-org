@@ -30,16 +30,15 @@
 <footer>  
   <div class="wrap row">
     <div class="column small-12 medium-4">
-      <h3>Links:</h3>
-      <hr>
-      <a href="https://groups.google.com/forum/#!forum/drg-cms">DRG CMS discussion forum</a><br><br>
-      <a href="https://github.com/drgcms">DRG CMS project on GitHub</a>
+      <%= dc_render(:dc_part, position: 'links') %>
     </div>
+    
     <div class="column small-12 medium-4">
       <h3>Last news:</h3>
       <hr>
       <%= dc_render(:dc_news, method: 'last_news') %>
     </div>
+    
     <div class="column small-12 medium-4">
       <h3>Last blogs:</h3>
       <hr>

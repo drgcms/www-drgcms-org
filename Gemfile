@@ -1,10 +1,7 @@
-
 #ruby "2.4"
 
 ENV["RAILS_ENV"] ||= "development"
-
 source 'https://rubygems.org'
-#source 'http://gems.ozs.si' if ENV["RAILS_ENV"] == "production"
 
 gem 'rails' , '~> 5.2.0'
 #gem 'activeresource'
@@ -48,7 +45,7 @@ else
   gem 'drg_manual'
   gem 'drg_rotator'
   gem 'drg_blog_news_forum'
-  gem 'rails_12factor' #, group: :production
+  gem 'rails_12factor'
 end
 
 if ENV["RAILS_ENV"] == "development"
