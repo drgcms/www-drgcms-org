@@ -1,7 +1,7 @@
 PATH
   remote: ../drg_blog_news_forum
   specs:
-    drg_blog_news_forum (0.5.52.2)
+    drg_blog_news_forum (0.5.52.3)
       drg_cms
       rails
 
