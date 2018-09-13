@@ -203,6 +203,14 @@ font-size: 1.2em;
   right: 8px;
 }
 
+.more-blogs {
+  background-color: #f2f2f2;
+}
+.more-blogs a {
+  color: #666;
+}
+
+
 /*******    MOBILE    ********/
 @media only screen and (max-width: 600px) {
   .hero .columns {
