@@ -34,17 +34,19 @@ if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'capybara'
   gem 'selenium-webdriver'
   
-  gem 'drg_cms', :path => '../drg_cms'
+  gem 'drg_cms',                 :path => '../drg_cms'
   gem 'drg_default_html_editor', :path => '../drg_default_html_editor'
-  gem 'drg_manual', :path => '../drg_manual'
-  gem 'drg_blog_news_forum', :path => '../drg_blog_news_forum'
-  gem 'drg_rotator', :path => '../drg_rotator'
+  gem 'drg_manual',              :path => '../drg_manual'
+  gem 'drg_blog_news_forum',     :path => '../drg_blog_news_forum'
+  gem 'drg_rotator',             :path => '../drg_rotator'
+  gem 'drg_resources_plugin',    :path => '../drg_resources_plugin'
 else
   gem 'drg_cms'
   gem 'drg_default_html_editor'
   gem 'drg_manual'
   gem 'drg_rotator'
   gem 'drg_blog_news_forum'
+  gem 'drg_resources_plugin'
   gem 'rails_12factor'
 end
 

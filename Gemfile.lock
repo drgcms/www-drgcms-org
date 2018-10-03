@@ -35,6 +35,13 @@ PATH
       drg_cms
 
 PATH
+  remote: ../drg_resources_plugin
+  specs:
+    drg_resources_plugin (0.1.0)
+      drg_cms
+      rails (~> 5)
+
+PATH
   remote: ../drg_rotator
   specs:
     drg_rotator (0.1.0)
@@ -97,7 +104,7 @@ GEM
       msgpack (~> 1.0)
     bson (4.3.0)
     builder (3.2.3)
-    capybara (3.7.2)
+    capybara (3.9.0)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -146,7 +153,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
-    marcel (0.3.2)
+    marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (0.9.0)
     mimemagic (0.3.2)
@@ -158,7 +165,7 @@ GEM
     mongo_session_store-rails5 (7.0.0.1)
       actionpack (>= 3.1)
       rails (>= 5.0, < 6.0)
-    mongoid (7.0.1)
+    mongoid (7.0.2)
       activemodel (>= 5.1, < 6.0.0)
       mongo (>= 2.5.1, < 3.0.0)
     msgpack (1.2.4)
@@ -257,6 +264,7 @@ DEPENDENCIES
   drg_cms!
   drg_default_html_editor!
   drg_manual!
+  drg_resources_plugin!
   drg_rotator!
   font-awesome-rails
   foundation-rails
