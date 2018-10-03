@@ -10,9 +10,10 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require drg_cms_application
+//= require drg_cms_cms
 //= require drg_default_html_editor_application
 //= require www
+//= require resources
 //= require foundation
 
 $(function(){ $(document).foundation(); });

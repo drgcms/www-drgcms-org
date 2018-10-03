@@ -8,12 +8,14 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require drg_cms_application
+ *= require drg_cms_cms
  *= require drg_default_html_editor_application 
  *= require drg_blog_news_forum
  *= require drg_manual
  *= require foundation_and_overrides  
  *= require www
+ *= require resources
+
  */
 
 .dc-color-odd, .dc-color-even {
