@@ -7,7 +7,7 @@ gem 'rails', '~> 6'
 #gem 'rails', github: 'rails/rails', branch: 'master'
 #gem 'activeresource'
 
-gem 'sass-rails'
+gem 'sassc-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'uglifier'      #, '>= 1.0.3'
 gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
