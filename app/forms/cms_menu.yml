@@ -36,4 +36,10 @@ menu:
         controller: cmsedit
         icon: book
         table: note
+      120: 
+        caption: Test
+        controller: cmsedit
+        icon: fa-check-circle-o
+        form_name: test_dc_memory
+        table: dc_memory
                 

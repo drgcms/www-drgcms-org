@@ -3,7 +3,8 @@
 ENV["RAILS_ENV"] ||= "development"
 source 'https://rubygems.org'
 
-gem 'rails' , '~> 5.2.0'
+gem 'rails', '~> 6'
+#gem 'rails', github: 'rails/rails', branch: 'master'
 #gem 'activeresource'
 
 gem 'sass-rails'
@@ -11,8 +12,8 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'uglifier'      #, '>= 1.0.3'
 gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
 
-gem 'mongoid'#, '~> 6.4.0' # github: 'mongoid/mongoid'
-gem 'mongo_session_store-rails5'#, github: 'maisaengineering/mongoid4-session-store'
+gem 'mongoid', '~> 7.0.5' # github: 'mongoid/mongoid'
+gem 'mongo_session_store'
 gem 'jquery-rails' #, '= 4.0.5'
 gem 'jquery-ui-rails'
 
@@ -24,15 +25,13 @@ gem 'foundation-rails' #, '~> 5'
 gem 'font-awesome-rails'
 gem 'spreadsheet'
 
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', require: false
 
 if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'puma'
-  gem 'listen'
-  
-  gem 'minitest'
-  gem 'capybara'
-  gem 'selenium-webdriver'
+  gem 'byebug'
+  gem 'web-console'#, '>= 3.3.0'
+	gem 'listen'#, '>= 3.0.5', '< 3.2'  
   
   gem 'drg_cms',                 :path => '../drg_cms'
   gem 'drg_default_html_editor', :path => '../drg_default_html_editor'
@@ -58,4 +57,5 @@ end
 if ENV["RAILS_ENV"] == "test"
   gem 'minitest'
   gem 'capybara'
+  gem 'selenium-webdriver'
 end
