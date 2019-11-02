@@ -9,6 +9,7 @@ gem 'rails', '~> 6'
 
 gem 'sassc-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'sprockets', '< 4'
 gem 'uglifier'      #, '>= 1.0.3'
 gem "non-stupid-digest-assets"#, github: 'alexspeller/non-stupid-digest-assets' 
 
