@@ -1,0 +1,37 @@
+table: dc_memory
+title: Testing dc_memory browser
+controls: test_dc_memory
+
+index: 
+  filter: name as text_field, alias as text_field
+  actions: 
+    1: 
+      type: new
+      caption: pazi gleda
+    2: filter
+
+result_set:
+  filter: filter_1
+  actions: 
+    1: edit
+
+  columns:
+    10: 
+      name: name
+      caption: Ime
+      size: 20%
+    20: 
+      name: description
+      caption: Opis
+      size: 20%
+
+form:
+  fields:
+    10:
+      name: name
+      type: text_field
+      size: 60
+    20:
+      name: description
+      type: text_field
+      size: 50

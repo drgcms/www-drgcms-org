@@ -1,9 +1,11 @@
-<div class="wrap">
+<div>
 <%= paginate plugins %>
 
 <% for plugin in plugins %>
   <div class="plugin">
-      <h3><%= link_to("#{plugin.name} (#{plugin.version})", "/plugins?p_id=#{plugin._id}&method=show") %></h3>
+    <%= link_to("/plugins?p_id=#{plugin._id}&method=show") do %>
+      <h2><%= plugin.name %> <%= plugin.version %></h2>
+    <% end %>
     <div class="plugin-info">
       <%= plugin.info %>
     </div>

@@ -1,7 +1,8 @@
-body {
+body, h1,h2,h3,h4,h5,h6 {
 /*  background-color: #222;*/
-  font-family: Noto Sans, Helvetica;
+  font-family: Lato, Helvetica;
 }
+
 .wrap {
   margin: 0 auto;
   max-width: 1050px;
@@ -17,7 +18,7 @@ p {margin-bottom: 0.1rem}
   padding: 0;
 }
 
-.top-bar a {font-weight: bold;} 
+.top-bar a {font-weight: 900;} 
 
 .top-bar ul {
   background-color: #333;
@@ -43,7 +44,11 @@ p {margin-bottom: 0.1rem}
   color: #999;
 }
 
-footer a {color: #999;}
+footer a div {
+  color: #999;
+  font-size: 1.1em;
+  padding-bottom: 8px;
+}
 .menu a:hover, footer a:hover {color: #666;}
 
 .login {max-width: 930px; }
@@ -57,7 +62,7 @@ footer a {color: #999;}
 /************* MAIN ************/
 .main {
   padding: 20px 0px;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .main .column {
@@ -72,6 +77,8 @@ margin: 20px 0px;
 
 .hero {
 background-color: #fff;
+font-size: 0.9em;
+font-weight: 400;
 
 }
 
@@ -98,14 +105,23 @@ footer {
   color: rgba(255,255,255,0.5);
 }
 
-footer h3 {
+footer h2 {
   font-size: 1.3em;
   color: rgba(255,255,255,0.7);
+  font-weight: 600;
 }
 
 footer hr {
 margin: 5px 0;
   color: rgba(255,255,255,0.7);
+}
+
+footer .date {
+  font-weight: 400;
+}
+
+footer .title {
+  font-weight: 300;
 }
 
 #poll {
@@ -167,6 +183,21 @@ font-family: monospace;
 font-size: 1.2em;
 }
 
+#plugins-div h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+#plugins-div h2 {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+#plugins-div .plugin-info {
+  margin-bottom: 1rem;
+  line-height: 1.2em;
+}
+
 .pagination {
   display: inline-flex;
   padding-left: 1em; float: left;
@@ -203,11 +234,42 @@ font-size: 1.2em;
   right: 8px;
 }
 
+/****** BLOGS *******/
 .more-blogs {
   background-color: #f2f2f2;
 }
 .more-blogs a {
   color: #666;
+  font-size: 1.1em;
+}
+.more-blogs h2 {
+  padding: 8px 0;
+  font-size: 1.8rem;
+  line-height: 1.1em;
+  font-weight: 700;
+}
+
+.blog-title h1, .news h1 {
+  font-size: 2rem;
+  font-weight: 700;  
+}
+
+#blogs .entry {
+  font-size: 1.2em;
+  line-height: 1rem;
+  padding-bottom: 8px;
+}
+
+
+#blogs h2, .news h2 {
+  font-size: 1.6rem;
+  font-weight: 600; 
+  line-height: 1.1em;
+}
+
+.news .document {
+  line-height: 1rem;
+  padding-bottom: 1rem;
 }
 
 

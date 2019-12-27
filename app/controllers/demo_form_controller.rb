@@ -25,8 +25,7 @@ def show_result
               '#div_td_record_result' => html, 
               'window' => '/files/demo_form_test.pdf'}
   
-  render json: response.to_json
-  #dc_render_ajax(operation: 'window', value: '/files/demo_form_test.pdf')
+  render json: response
 end
 
 end

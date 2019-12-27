@@ -11,7 +11,7 @@ def search
   html = render_to_string(:partial => 'list', locals: { plugins: plugins })
 
   result = { '#div_plugins-result' => html }
-  render inline: result.to_json, formats: 'js'
+  render json: result
 end
 
 end
