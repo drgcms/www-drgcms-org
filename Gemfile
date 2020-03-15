@@ -32,7 +32,7 @@ if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'puma'
   gem 'byebug'
   gem 'web-console'#, '>= 3.3.0'
-	gem 'listen'#, '>= 3.0.5', '< 3.2'  
+  gem 'listen'#, '>= 3.0.5', '< 3.2'  
   
   gem 'drg_cms',                 :path => '../drg_cms'
   gem 'drg_default_html_editor', :path => '../drg_default_html_editor'
@@ -40,6 +40,7 @@ if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'drg_blog_news_forum',     :path => '../drg_blog_news_forum'
   gem 'drg_rotator',             :path => '../drg_rotator'
   gem 'drg_resources_plugin',    :path => '../drg_resources_plugin'
+  gem 'drg_plugin_banka',        :path => '../drg_plugin_banka'
 else
   gem 'drg_cms'
   gem 'drg_default_html_editor'
@@ -48,11 +49,15 @@ else
   gem 'drg_blog_news_forum'
   gem 'drg_resources_plugin'
   gem 'rails_12factor'
+  gem 'drg_plugin_banka'
 end
 
 if ENV["RAILS_ENV"] == "development"
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem "better_errors"
+  gem "binding_of_caller"  
 end
 
 if ENV["RAILS_ENV"] == "test"

@@ -44,7 +44,7 @@ def get_design_and_render(design_doc)
   site_top    = '<%= dc_page_top %>'
   site_bottom = '<%= dc_page_bottom %>'
 # lets try the rails way
- if @options[:control] and @options[:action]
+  if @options[:control] and @options[:action]
     controller = "#{@options[:control]}_control".classify.constantize rescue nil
     extend controller if controller
     return send @options[:action] if respond_to?(@options[:action])
@@ -136,7 +136,7 @@ def process_login
 #      success = ldap.bind
 
 # authenticate locally
-      success = user.authenticate(params[:record][:password]) unless success
+      success ||= user.authenticate(params[:record][:password]) 
     end
   end
 # 
