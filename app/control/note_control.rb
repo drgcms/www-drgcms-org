@@ -1,4 +1,3 @@
-#encoding: utf-8
 #--
 # Copyright (c) 2017+ Damjan Rems
 #
@@ -25,7 +24,7 @@
 ######################################################################
 # DrgcmsControls for Notes application
 ######################################################################
-module DrgcmsControls::NoteControl
+module NoteControl
 
 ######################################################################
 # Fill in currently logged user.

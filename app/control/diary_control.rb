@@ -1,4 +1,3 @@
-#encoding: utf-8
 #--
 # Copyright (c) 
 #
@@ -25,7 +24,7 @@
 ######################################################################
 # DrgcmsControls for Diary application
 ######################################################################
-module DrgcmsControls::DiaryControl
+module DiaryControl
 
 ######################################################################
 # Fill in currently logged user.
