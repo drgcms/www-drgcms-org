@@ -26,9 +26,11 @@ gem 'foundation-rails' #, '~> 5'
 gem 'font-awesome-rails'
 gem 'spreadsheet'
 
+gem 'redis-rails'
+
 gem 'bootsnap', require: false
 
-if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
+if ENV["RAILS_ENV"] == "development" || ENV["RAILS_ENV"] == "test"
   gem 'puma'
   gem 'byebug'
   gem 'web-console'#, '>= 3.3.0'
@@ -40,7 +42,6 @@ if ENV["RAILS_ENV"] == "development" or ENV["RAILS_ENV"] == "test"
   gem 'drg_blog_news_forum',     :path => '../drg_blog_news_forum'
   gem 'drg_rotator',             :path => '../drg_rotator'
   gem 'drg_resources_plugin',    :path => '../drg_resources_plugin'
-  gem 'drg_plugin_banka',        :path => '../drg_plugin_banka'
   gem 'drg_examples',            :path => '../drg_examples'
 else
   gem 'drg_cms'
@@ -50,7 +51,6 @@ else
   gem 'drg_blog_news_forum'
   gem 'drg_resources_plugin'
   gem 'rails_12factor'
-  gem 'drg_plugin_banka'
   gem 'drg_examples'
 end
 
@@ -58,8 +58,8 @@ if ENV["RAILS_ENV"] == "development"
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  gem "better_errors"
-  gem "binding_of_caller"  
+#  gem "better_errors"
+#  gem "binding_of_caller"  
 end
 
 if ENV["RAILS_ENV"] == "test"

@@ -18,5 +18,6 @@
 /vendor/ruby
 
 /nbproject
+/.idea
 /public/files
 /Gemfile.lock
