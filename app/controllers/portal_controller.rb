@@ -43,13 +43,13 @@ def get_design_and_render(design_doc)
   layout      = @site.site_layout.blank? ? 'content' : @site.site_layout
   site_top    = '<%= dc_page_top %>'
   site_bottom = '<%= dc_page_bottom %>'
-# lets try the rails way
+  # lets try the rails way
   if @options[:control] and @options[:action]
     controller = "#{@options[:control]}_control".classify.constantize rescue nil
     extend controller if controller
     return send @options[:action] if respond_to?(@options[:action])
   end
-#  
+
   if design_doc
     if !design_doc.rails_view.blank? 
       if design_doc.rails_view.downcase != 'site'
@@ -60,7 +60,7 @@ def get_design_and_render(design_doc)
       return render(inline: design, layout: layout)
     end
   end
-# 
+
   if @site.rails_view.blank? 
     design = site_top + @site.design + site_bottom
     return render(inline: design, layout: layout)
@@ -75,40 +75,41 @@ end
 ###########################################################################
 def portal_request()
   session[:edit_mode] ||= 0
-# Initialize parts
+  # Initialize parts
   @parts    = nil
   @js, @css = '', ''
-# find domain name in sites
+  # find domain name in sites
   @site = dc_get_site
-# site is not defined. render 404 error
+  # site is not defined. render 404 error
   return dc_render_404('Site!') if @site.nil?
+
   dc_set_options(@site.settings)
-# HOMEPAGE. When no parameters is set
+  # HOMEPAGE. When no parameters is set
   params[:path] = @site.homepage_link if params[:id].nil? and params[:path].nil?
-# Search for page 
+  # Search for page
   pageclass = @site.page_table.classify.constantize
   if params[:id]
     @page = pageclass.find_by(subject_link: params[:id], dc_site_id: @site.id)
   elsif params[:path]
-# path may point direct to page's subject_link
+    # path may point direct to page's subject_link
     @page = pageclass.find_by(subject_link: params[:path], dc_site_id: @site.id)
   end
-# if @page is not found render 404 error
   return dc_render_404('Page!') unless @page
+
   dc_set_options @page.params
-  dc_set_is_mobile unless session[:is_mobile] # do it only once per session
-# find design if defined. Otherwise design MUST be declared in site
+  dc_set_is_mobile unless session[:is_mobile].nil? # do it only once per session
+  # find design if defined. Otherwise design MUST be declared in site
   if @page.dc_design_id
     @design = DcDesign.find(@page.dc_design_id)
     return dc_render_404('Design!') unless @design
   end
-# Add to edit menu
+  # for the edit menu
   if session[:edit_mode] > 0
     session[:site_id]         = @site.id
     session[:site_page_table] = @site.page_table
     session[:page_id]         = @page.id
   end
-# perform check every hour. Perhaps if user has rights changes
+  # perform check every hour if user rights have changed.
   session[:last_check] ||= Time.now
   if (session[:last_check] - Time.now) > 3600
     # perform checks
@@ -123,23 +124,24 @@ end
 # Process login with an option to authenticate to LDAP server.
 ####################################################################
 def process_login
-# Something is really wrong
+  # Something is really wrong
   return dc_render_404('Login:') unless ( params[:record] and params[:record][:username] and params[:record][:password] )
+
   success = false
   unless params[:record][:password].blank? 
-# user must be defined locally
+    # user must be defined locally
     user = DcUser.find_by(username: params[:record][:username])
     if user
-# LDAP alternative. You must add gem 'net-ldap' to Gemfile    
+# LDAP alternative password check. You must add gem 'net-ldap' to Gemfile
 #      ldap = Net::LDAP.new(host: 'ldap.yourdomain.com')
 #      ldap.auth("#{params[:record][:username]}@yourdomain.com", params[:record][:password])
 #      success = ldap.bind
 
-# authenticate locally
+      # authenticate locally
       success ||= user.authenticate(params[:record][:password]) 
     end
   end
-# 
+
   if success
     fill_login_data(user, false)
     redirect_to '/'

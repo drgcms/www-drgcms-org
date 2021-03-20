@@ -59,7 +59,7 @@ end
 #        assert find(:xpath, "(//td[text()='bla bla'])")
       end
     end     
-        sleep 2
+
   end
 #=end  
   test "cmsedit_tests" do

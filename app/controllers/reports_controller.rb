@@ -34,16 +34,16 @@ def diary()
   format_10      = Spreadsheet::Format.new :size => 10
   format_10_bold = Spreadsheet::Format.new :weight => :bold, :size => 10
   
-  book  = Spreadsheet::Workbook.new
+  book = Spreadsheet::Workbook.new
   page = book.create_worksheet :name => 'Diary'
   page.default_format = format_10
-# 
   page[0,0] = "#{name}: DIARY #{date_from.strftime('%d.%m.%Y')} - #{date_to.strftime('%d.%m.%Y')}"
+
   page.row(0).default_format = format_14
   row, col = 2, -1
-  ['Date','Time(min)','Title'].each { |glava| page[row, (col+=1)] = glava }
+  ['Date','Time(min)','Title'].each { |header| page[row, (col += 1)] = header }
   page.row(2).default_format = format_10_bold
-#
+
   row = 3
   Diary.where(user_id: session[:user_id], 
           :time_begin.gte => date_from, :time_begin.lte => date_to)

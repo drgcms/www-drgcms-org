@@ -178,7 +178,9 @@ font-size: 1.2em;
 background-color: #eee;
 border: 1px solid #e8e8e8;
 padding: 5px;
-font-family: monospace; 
+font-family: monospace;
+overflow: auto;
+white-space: nowrap;
 }
 
 .plugin-info {
