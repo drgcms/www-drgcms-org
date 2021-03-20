@@ -51,7 +51,7 @@ else
   gem 'drg_blog_news_forum'
   gem 'drg_resources_plugin'
   gem 'rails_12factor'
-  gem 'drg_examples'
+  #gem 'drg_examples'
 end
 
 if ENV["RAILS_ENV"] == "development"
