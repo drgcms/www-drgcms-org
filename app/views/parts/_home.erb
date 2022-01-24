@@ -1,6 +1,6 @@
 
-<section class="hero" style="padding-top: 2rem;">
-<!-- -->
+<section class="hero">
+<!--
 
   <div style="background-color: #ccc;">
     <div class="wrap row" style="padding-top:0">
@@ -9,51 +9,109 @@
       </div>
     </div>
   </div>
-  
-<!-- -->
 
-<div class="wrap row">
-    <div class="small-12 medium-6 columns">
+ -->
+
+  <div class="wrap grid jumpstart">
+    <div class="grid-one">
+      <%= link_to(image_tag('drg_jumpstart.svg', alt: 'DRG CMS jumpstart'), 'https://github.com/drgcms/drg-portal-jumpstart', target: '_blank') %>
+    </div>
+
+    <div class="grid-one">
+      Jumpstart your Intranet portal in just few minutes.
+      <br>
+      <a class="button primary" href="https://github.com/drgcms/drg-portal-jumpstart" target="_blank">GO!</a>
+    </div>
+  </div>
+
+  <!--- SIX STEPS --->
+  <div class="six-steps">
+    <div class="wrap">
+      <div class="title">
+        6 easy steps to create data entry program
+      </div>
+
+      <div class="grid">
+
+        <div class="steps grid-one" >
+          <a href="/6-steps-to-create-data-entry-program#one"><div>Step 1: <span>Create Model</span></div></a>
+          <a href="/6-steps-to-create-data-entry-program#two"><div>Step 2: <span>Generate Form</span></div></a>
+          <a href="/6-steps-to-create-data-entry-program#three"><div>Step 3: <span>Edit Form</span></div></a>
+          <a href="/6-steps-to-create-data-entry-program#four"><div>Step 4: <span>Define Labels and Help Text</span></div></a>
+          <a href="/6-steps-to-create-data-entry-program#five"><div>Step 5: <span>Create Control File</span></div></a>
+          <a href="/6-steps-to-create-data-entry-program#six"><div>Step 6: <span>Include in Menu</span></div></a>
+        </div>
+
+        <div class="grid-one">
+          <%= link_to(image_tag('six-steps.svg', alt: 'DRG CMS six steps'), '/6-steps-to-create-data-entry-program') %>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <a class="button primary" href="/6-steps-to-create-data-entry-program">Learn more</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!--- ROLES  http://www.drgcms.org/ --->
+  <div class="roles">
+    <div class="wrap">
+      <div class="title">
+        Role based application and database access system
+      </div>
+
+      <div class="grid">
+        <div class="grid-one">
+          <%= link_to(image_tag('roles.svg', alt: 'DRG CMS roles'), '/docs/drg-cms-documentation/access-control') %>
+        </div>
+
+        <div class="steps grid-one">
+          <div>&bull; Create New <span>User Role</span></div>
+          <div>&bull; Define <span>Access Permissions</span> on Collections (or groups of collections) for the Role</div>
+          <div>&bull; Add Role to <span>Users</span></div>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <a class="button primary" href="/docs/drg-cms-documentation/access-control">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+<% if false %>
+  <div class="wrap row">
+    <div class="small-12 columns">
       <p><br>Create complex data entry applications with minimum amount of source code.<br><br>
-      <a href="/create-applications" class="button primary">Learn More</a>
+        <a href="/create-applications" class="button primary">Learn More</a>
       </p>
-    </div>
 
-    <div class="small-12 medium-6 columns">
-      <%= image_tag('drg-1.png') %>
+      <%= dc_render(:dc_rotator, element: 'rotator0') %>
     </div>
   </div>
+<% end %>
+
 <!-- -->
 
-  <div style="background-color: #ccc;">
-    <div class="wrap row">
-      <div class="small-12 columns">
-        <font style="font-size: 3.5em; color: #fff;">Ideal for building Intranet portals.</font><br><br>
-        <a href="/blog/Damjan%20Rems/create-internal-portal-application-in-few-minutes-2018-09-13" class="button primary">Learn More</a>
-      </div>
-    </div>
-  </div>
-  
-<!-- -->
-
-  <div style="">
-    <div class="wrap row">
-      <div class="small-12 medium-7 columns">
-        <%= dc_render(:dc_rotator, element: 'rotator1') %>
-      </div>
-      <div class="small-12 medium-5 columns">
-        <font style="font-size: 3em;">Multiple sites on single RubyOnRails instance.</font>
-        <br><br><a href="/multiple-sites" class="button primary">Learn More</a>
+  <div class="six-steps">
+    <div class="wrap">
+      <div class="grid">
+        <div class="rotator">
+          <%= dc_render(:dc_rotator, element: 'rotator1') %>
+        </div>
+        <div class="grid-one">
+          <div>Multiple sites on single RubyOnRails instance.</div>
+          <br><a href="/multiple-sites" class="button primary">Learn More</a>
+        </div>
       </div>
     </div>
   </div>
 
 <!-- -->
 
-  <div style="background-color: #ccc;">
-    <div class="wrap row">
-      <div class="small-12 columns">
-        <span style="font-size: 4em; color: #fff;">Works with Rails 6.1</span>
+  <div>
+    <div class="wrap">
+      <div class="works" >
+        <span style="font-size: 3.5em; color: #222;">Works with Ruby on Rails 6.1</span>
       </div>
     </div>
   </div>

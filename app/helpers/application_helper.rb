@@ -1,4 +1,5 @@
 module ApplicationHelper
+include CmsCommonHelper
 
 #####################################################################
 # Return DcPiece document with name 'social sites' which should hold 

@@ -1,6 +1,7 @@
 body, h1,h2,h3,h4,h5,h6 {
 /*  background-color: #222;*/
-  font-family: Lato, Helvetica;
+  font-family: DrgSans, Helvetica;
+
 }
 
 .wrap {
@@ -78,26 +79,94 @@ margin: 20px 0px;
 .main a:hover {color: #cb161a}
 
 .hero {
-background-color: #fff;
-font-size: 0.9em;
-font-weight: 400;
-
+  background-color: #fff;
+  font-size: 0.9em;
+  font-weight: 500;
+  padding-top: 2rem
 }
 
 .hero .columns {
-padding: 4rem 0.2rem;
-vertical-align: middle;
-text-align: center;
+  padding: 4rem 0.2rem;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .hero p {
-font-size: 2em;
-padding: 0px 20px;
+  font-size: 2em;
+  padding: 0px 20px;
 }
 
-.hero img {
-/*padding: 30px;*/
+.hero .grid {
+  display: grid;
+  grid-gap: 1rem;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  font-size: 2.6em;
+  text-align: center;
+
 }
+
+.hero .grid .grid-one {
+  padding: 0.5rem;
+}
+
+.hero .six-steps {
+  background-color: #ebf3fa;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+
+.hero .title {
+  text-align: center;
+  font-size: 2.6em;
+  padding: 2rem 0;
+}
+
+.hero .six-steps a {
+  color: #222;
+  font-size: 2rem;
+}
+
+.hero .six-steps .steps {
+  text-align: left;
+}
+
+.hero .roles {
+  padding: 2rem 0;
+}
+
+.hero .roles .steps {
+   text-align: left;
+   font-size: 1.8rem;
+   line-height: normal;
+ }
+
+.hero .roles .steps span {
+  color: #4547ec;
+}
+
+.hero .button.primary {
+  background-color: #4547ec;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.hero .button.primary:hover {
+  background-color: #ff8a83;
+}
+
+.hero .rotator p {
+  font-size: 1.4rem;
+}
+
+.hero .works {
+
+  text-align: center;
+  padding: 2rem 0;
+}
+
 /************* FOOTER ************/
 footer {
   padding:40px 0;
