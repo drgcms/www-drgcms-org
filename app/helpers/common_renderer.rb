@@ -42,12 +42,11 @@ end
 ########################################################################
 def login
   html = if @parent.session[:user_id].nil?
-    %Q[ #{@parent.link_to('Login ', {controller: 'dc_common', action: 'login', return_to: @parent.request.url}, class: 'link-middle')} ]
+    %(#{@parent.link_to('Login ', { controller: 'dc_common', action: 'login', return_to: @parent.request.url }, class: 'link-middle', rel: 'nofollow') } )
   else
-    %Q[
-    #{@parent.link_to('Logout ', { controller: 'dc_common', action: 'logout', return_to: @parent.request.url}, class: 'link-middle')}
-    #{@parent.session[:user_name]}
-]
+    %(
+    #{@parent.link_to('Logout ', { controller: 'dc_common', action: 'logout', return_to: @parent.request.url }, class: 'link-middle', rel: 'nofollow') }
+    #{@parent.session[:user_name] })
   end
   html
 end
