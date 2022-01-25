@@ -37,7 +37,7 @@ table {width: inherit;}
   color: #db363a;
 }
 .top-bar-title sup {
-  color: #4547ec;
+  color: #222;
   font-size: 0.5em;
 }
 
@@ -306,6 +306,14 @@ font-size: 1.2em;
   right: 8px;
 }
 
+.manual .menu a {
+  color: #111;
+}
+
+.manual .menu .is-active > a {
+  color: #000;
+}
+
 /****** BLOGS *******/
 .more-blogs {
   background-color: #f2f2f2;
@@ -331,10 +339,10 @@ font-size: 1.2em;
 
 #blogs .entry {
   font-size: 1.2em;
-  line-height: 1rem;
+  line-height: normal;
   padding-bottom: 8px;
+  font-width: 500;
 }
-
 
 #blogs h2, .news h2 {
   font-size: 1.6rem;
@@ -343,10 +351,10 @@ font-size: 1.2em;
 }
 
 .news .document {
-  line-height: 1rem;
-  padding-bottom: 1rem;
+  line-height: normal;
+  font-width: 500;
+  padding-bottom: 8px;
 }
-
 
 /*******    MOBILE    ********/
 @media only screen and (max-width: 600px) {
