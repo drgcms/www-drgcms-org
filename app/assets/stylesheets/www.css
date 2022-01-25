@@ -16,16 +16,16 @@ table {width: inherit;}
 
 /************* TOP BAR ************/
 .top-bar {
-  color: #fff;
-  background-color: #333;
+  background-color: #fff;
   padding: 0;
 }
 
-.top-bar a {font-weight: 900;} 
+.top-bar a {
+  font-weight: 700;
+}
 
 .top-bar ul {
-  background-color: #333;
-
+  background-color: #fff;
 }
 .top-bar-title { 
   padding: 0; 
@@ -37,27 +37,30 @@ table {width: inherit;}
   color: #db363a;
 }
 .top-bar-title sup {
-  color: white;
-  font-size: 0.6em;
+  color: #4547ec;
+  font-size: 0.5em;
 }
 
 .menu a, footer a {
   font-size: 1.5em;
   padding:1em;
-  color: #999;
+  color: #111;
+}
+
+footer a {
+  padding: 0;
 }
 
 footer a div {
-  color: #999;
+  color: #333;
   font-size: 1.1em;
   padding-bottom: 8px;
 }
-.menu a:hover, footer a:hover {color: #666;}
+.menu a:hover, footer a:hover {color: #db363a;}
 
 .login {max-width: 930px; }
 
 .top-bar-right {
-  background-color: #333;
   float: right;
   padding-top: 0.5em;
 }
@@ -162,7 +165,6 @@ margin: 20px 0px;
 }
 
 .hero .works {
-
   text-align: center;
   padding: 2rem 0;
 }
@@ -171,14 +173,12 @@ margin: 20px 0px;
 footer {
   padding:40px 0;
   min-height: 200px;
-  background-color: #222;
+  background-color: #ebf3fa;
   font-size: 12px;
-  color: rgba(255,255,255,0.5);
 }
 
 footer h2 {
   font-size: 1.3em;
-  color: rgba(255,255,255,0.7);
   font-weight: 600;
 }
 
@@ -188,7 +188,7 @@ margin: 5px 0;
 }
 
 footer .date {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 footer .title {
@@ -282,8 +282,7 @@ font-size: 1.2em;
 }
 
 .menu-login .logout {
-  color: #fff;
-  font-weight: normal;
+  color: #db363a;
 }
 /* throw out after next version */
 .manual .column:first-child {

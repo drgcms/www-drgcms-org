@@ -1,14 +1,14 @@
 PATH
   remote: ../drg_blog_news_forum
   specs:
-    drg_blog_news_forum (0.6.2)
+    drg_blog_news_forum (0.6.3)
       drg_cms
       rails
 
 PATH
   remote: ../drg_cms
   specs:
-    drg_cms (0.6.1.5.1)
+    drg_cms (0.6.1.6)
       bcrypt
       font-awesome-rails
       jquery-rails
@@ -51,7 +51,7 @@ PATH
 PATH
   remote: ../drg_rotator
   specs:
-    drg_rotator (0.1.0)
+    drg_rotator (0.1.1)
       drg_cms
       foundation-rails
 
