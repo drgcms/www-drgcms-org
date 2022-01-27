@@ -5,7 +5,8 @@ Summary
 
 Source files that make up www.drgcms.org web site. 
 
-DrgCms is rapid web application development tool which uses MongoDB as database backend. 
+DrgCms is rapid web application development tool which uses 
+RubyOnRails framework and MongoDB as database backend. 
 
 Project Tracking
 ----------------
