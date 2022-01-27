@@ -26,11 +26,11 @@
 ######################################################################
 module NoteControl
 
-######################################################################
-# Fill in currently logged user.
-######################################################################
-def dc_before_new()
-  @record.user_id = session[:user_id]
+###########################################################################
+# Allow only current user documents to be displayed
+###########################################################################
+def current_users_documents
+  user_filter_options(Note).and(user_id: session[:user_id])
 end
 
 end 

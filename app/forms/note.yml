@@ -9,17 +9,17 @@ index:
     2: filter
 
 result_set:
-#  filter: notes_filter
+  filter: current_users_documents
   actions: 
     1: edit
 
   columns:
     10: 
       name: title
-      style: "text-align: left;"
-    20: 
+      width: 25%
+    20:
       name: time_begin
-      style: "text-align: left;width: 80px;"
+      width: 10%
       format: '%d.%m.%Y'
     30: 
       name: duration
@@ -32,11 +32,12 @@ form:
         name: user_id
         type: readonly
         eval: dc_name4_id,dc_user,name
+        default:
+          eval: 'session[:user_id]'
       20:
         name: title
         type: text_field
-        html:
-          size: 50
+        size: 50
       30:
         name: time_begin
         type: datetime_picker

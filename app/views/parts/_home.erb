@@ -78,26 +78,41 @@
     </div>
   </div>
 
-<% if false %>
-  <div class="wrap row">
-    <div class="small-12 columns">
-      <p><br>Create complex data entry applications with minimum amount of source code.<br><br>
-        <a href="/create-applications" class="button primary">Learn More</a>
-      </p>
 
-      <%= dc_render(:dc_rotator, element: 'rotator0') %>
+  <!-- DEMO -->
+
+  <div class="blue-bck">
+    <div class="wrap">
+      <div class="title">
+        Want to peek around?
+      </div>
+
+      <div class="grid">
+        <div class="demo">
+          <div>Login and click on <span>CMS menu</span> on the top left corner and look around.<br><br></div>
+          <div>UserName: <span>demo</span></div>
+          <div>Password: <span>demo</span></div>
+        </div>
+
+        <div class="grid-one">
+          <%= link_to(image_tag('demo.svg', alt: 'DRG CMS demo'), '/login', ref: 'nofollow') %>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <a class="button primary" href="/login" ref="nofollow">Login</a>
+      </div>
     </div>
   </div>
-<% end %>
 
-<!-- -->
+  <!-- Multiple sites -->
 
-  <div class="six-steps">
+  <div class="white-bck">
     <div class="wrap">
       <div class="grid">
         <div class="rotator">
           <%= dc_render(:dc_rotator, element: 'rotator1') %>
         </div>
+
         <div class="grid-one">
           <div>Multiple sites on single RubyOnRails instance.</div>
           <br><a href="/multiple-sites" class="button primary">Learn More</a>
