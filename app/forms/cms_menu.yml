@@ -24,22 +24,22 @@
 menu:
   80_test:
     caption: Test 
-    icon: bookmark-o
+    icon: question-mark
     items:
       100: 
         caption: Test
         controller: cmsedit
-        icon: table
+        icon: question-mark
         table: dc_test
       110: 
         caption: helpers.label.note.tabletitle
         controller: cmsedit
-        icon: book
+        icon: book-o
         table: note
       120: 
         caption: Test
         controller: cmsedit
-        icon: fa-check-circle-o
+        icon: question-mark
         form_name: test_dc_memory
         table: dc_memory
                 

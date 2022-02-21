@@ -31,7 +31,7 @@ module DiaryControl
 ######################################################################
 def dc_new_record()
   @record.user_id = session[:user_id]
-  @record.time_begin = Time.now
+  @record.time_begin = Time.now.localtime
 end
 
 ###########################################################################

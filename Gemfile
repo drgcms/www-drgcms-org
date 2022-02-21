@@ -23,7 +23,6 @@ gem 'kaminari-actionview'
 
 gem 'unicode_utils'
 gem 'foundation-rails' #, '~> 5'
-gem 'font-awesome-rails'
 gem 'spreadsheet'
 
 gem 'redis-rails'
@@ -43,6 +42,8 @@ if ENV["RAILS_ENV"] == "development" || ENV["RAILS_ENV"] == "test"
   gem 'drg_rotator',             :path => '../drg_rotator'
   gem 'drg_resources_plugin',    :path => '../drg_resources_plugin'
   gem 'drg_examples',            :path => '../drg_examples'
+  gem 'drg_material_icons',      :path => '../drg_material_icons'
+
 else
   gem 'drg_cms'
   gem 'drg_default_html_editor'
@@ -51,6 +52,7 @@ else
   gem 'drg_blog_news_forum'
   gem 'drg_resources_plugin'
   gem 'rails_12factor'
+  gem 'drg_material_icons'
   #gem 'drg_examples'
 end
 
