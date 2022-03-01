@@ -295,11 +295,11 @@ font-size: 1.2em;
 }
 
 /* LOGIN-LOGOUT */
-.menu-login .login {
+.menu-login .login i {
   color: #db363a;
 }
 
-.menu-login .logout {
+.menu-login .logout i {
   color: #db363a;
 }
 /* throw out after next version */
