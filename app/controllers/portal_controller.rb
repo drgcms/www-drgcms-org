@@ -22,8 +22,6 @@
 #++
 
 class PortalController < DcApplicationController
-  
-#before_action :dc_reload_patches if Rails.env.development?
 
 ##########################################################################
 # Request processing starts here
@@ -69,9 +67,10 @@ def get_design_and_render(design_doc)
 end
 
 ###########################################################################
-# Default request processing.
+# Request processing.
 # 
-# Za portal je potrebna manjša predelava
+# Portal has a bit different process request. Request processor is set on site document
+# and when set, it is called by dc_process_default_request method in DcApplicationController.
 ###########################################################################
 def portal_request()
   session[:edit_mode] ||= 0

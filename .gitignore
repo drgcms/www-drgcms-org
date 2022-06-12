@@ -21,3 +21,5 @@
 /.idea
 /public/files
 /Gemfile.lock
+/config/master.key
+
