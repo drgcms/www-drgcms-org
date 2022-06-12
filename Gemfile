@@ -3,7 +3,7 @@
 ENV["RAILS_ENV"] ||= "development"
 source 'https://rubygems.org'
 
-gem 'rails', '~> 6'
+#gem 'rails', '~> 6'
 #gem 'rails', github: 'rails/rails', branch: 'master'
 #gem 'activeresource'
 
